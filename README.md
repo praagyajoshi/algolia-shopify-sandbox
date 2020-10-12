@@ -4,3 +4,4 @@ Available here: https://codesandbox.io/s/github/praagyajoshi/algolia-shopify-san
 
 - This sandbox is only meant to replicate the Algolia widgets on the search and collection page of a Shopify store and not the whole store itself
 - There are 2 pages available for preview: `/search` and `/collections/collection-handle`
+- Default configuration has been picked up from the [demo store](https://algolia-app-demo-store.myshopify.com/)
