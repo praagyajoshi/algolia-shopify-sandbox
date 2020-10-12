@@ -9,6 +9,55 @@
     <!-- No css class stylesheet to make the sandbox look better -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 
+    <!--
+      All the files (templates, scripts) added by the Shopify app have been
+      moved to right before the `</body>` tag
+     -->
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">
+      <a href="/">Algolia x Shopify Codesandbox</a>
+    </h1>
+
+    <div class="main-content">
+      <p>
+        Welcome to the Codesandbox for the Shopify integration!
+        <br/>
+        Check out the <a href="/search">search page</a>, or a <a href="/collections/vans">sample collection page</a>.
+      </p>
+
+      <h2>Replicating a config</h2>
+      <p>
+        To replicate a config from a live store:
+        <ul>
+          <li>Edit this sandbox</li>
+          <li>Replace the contents of <code>algolia_config.js</code> with that from the store</li>
+          <li>In <code>index.html</code>, update the "main-content" class to a value that's available on the actual store (either the search page or collections page as applicable)</li>
+        </ul>
+      </p>
+
+      <h2>Previewing a collection page</h2>
+      <p>
+        To preview a collection page:
+        <ul>
+          <li>Edit this sandbox</li>
+          <li>Update <code>template_algolia_current_collection_id</code> to mention the actual collection ID</li>
+          <li>Navigate to <code>/collections/collection-handle</code></li>
+        </ul>
+      </p>
+
+      <h3>Some notes</h3>
+      <p>
+        <ul>
+          <li>
+            This sandbox is only meant to replicate the <strong>Algolia widgets on the search and collection page</strong> of a Shopify store and not the whole store itself.
+            Any customisations done to the widgets on a Shopify store will not be available here automatically.
+          </li>
+        </ul>
+      </p>
+    </div>
+
     <!-- Files added by the Shopify integration to the theme -->
     <!-- Algolia head -->
 
@@ -1599,52 +1648,5 @@
     <script src="/assets/algolia_instant_search.js" defer></script>
 
     <!-- /Algolia head -->
-  </head>
-  <body>
-    <h1 style="text-align: center;">
-      Algolia x Shopify Codesandbox
-    </h1>
-
-    <h4>
-      <a href="/">🔙 Home</a>
-    </h4>
-
-    <div class="main-content">
-      <p>
-        Welcome to the Codesandbox for the Shopify integration!
-        <br/>
-        Check out the <a href="/search">search page</a>, or a <a href="/collections/vans">sample collection page</a>.
-      </p>
-
-      <h2>Replicating a config</h2>
-      <p>
-        To replicate a config from a live store:
-        <ul>
-          <li>Edit this sandbox</li>
-          <li>Replace the contents of <code>algolia_config.js</code> with that from the store</li>
-          <li>In <code>index.html</code>, update the "main-content" class to a value that's available on the actual store (either the search page or collections page as applicable)</li>
-        </ul>
-      </p>
-
-      <h2>Previewing a collection page</h2>
-      <p>
-        To preview a collection page:
-        <ul>
-          <li>Edit this sandbox</li>
-          <li>Update <code>template_algolia_current_collection_id</code> to mention the actual collection ID</li>
-          <li>Navigate to <code>/collections/collection-handle</code></li>
-        </ul>
-      </p>
-
-      <h3>Some notes</h3>
-      <p>
-        <ul>
-          <li>
-            This sandbox is only meant to replicate the <strong>Algolia widgets on the search and collection page</strong> of a Shopify store and not the whole store itself.
-            Any customisations done to the widgets on a Shopify store will not be available here automatically.
-          </li>
-        </ul>
-      </p>
-    </div>
   </body>
 </html>
