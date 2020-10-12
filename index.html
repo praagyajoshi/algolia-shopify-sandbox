@@ -9,6 +9,13 @@
     <!-- No css class stylesheet to make the sandbox look better -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 
+    <!-- CSS to reset list styles -->
+    <style>
+      .ais-page ul, ol {
+        list-style: none;
+      }
+    </style>
+
     <!--
       All the files (templates, scripts) added by the Shopify app have been
       moved to right before the `</body>` tag
@@ -88,63 +95,61 @@
       €{{amount_with_comma_separator}}
     </script>
 
-    <script type="text/template" id="template_algolia_autocomplete">
-      <div class="
-        aa-columns-container
+    <script type="text/template" id="template_algolia_autocomplete"><div class="
+      aa-columns-container
 
-        [[# with.articles ]] aa-with-articles [[/ with.articles ]]
-        [[^ with.articles ]] aa-without-articles [[/ with.articles ]]
+      [[# with.articles ]] aa-with-articles [[/ with.articles ]]
+      [[^ with.articles ]] aa-without-articles [[/ with.articles ]]
 
-        [[# with.collections ]] aa-with-collections [[/ with.collections ]]
-        [[^ with.collections ]] aa-without-collections [[/ with.collections ]]
+      [[# with.collections ]] aa-with-collections [[/ with.collections ]]
+      [[^ with.collections ]] aa-without-collections [[/ with.collections ]]
 
-        [[# with.footer ]] aa-with-footer [[/ with.footer ]]
-        [[^ with.footer ]] aa-without-footer [[/ with.footer ]]
+      [[# with.footer ]] aa-with-footer [[/ with.footer ]]
+      [[^ with.footer ]] aa-without-footer [[/ with.footer ]]
 
-        [[# with.poweredBy ]] aa-with-powered-by [[/ with.poweredBy ]]
-        [[^ with.poweredBy ]] aa-without-powered-by [[/ with.poweredBy ]]
+      [[# with.poweredBy ]] aa-with-powered-by [[/ with.poweredBy ]]
+      [[^ with.poweredBy ]] aa-without-powered-by [[/ with.poweredBy ]]
 
-        [[# with.products ]] aa-with-products [[/ with.products ]]
-        [[^ with.products ]] aa-without-products [[/ with.products ]]
+      [[# with.products ]] aa-with-products [[/ with.products ]]
+      [[^ with.products ]] aa-without-products [[/ with.products ]]
 
-        [[# with.pages ]] aa-with-pages [[/ with.pages ]]
-        [[^ with.pages ]] aa-without-pages [[/ with.pages ]]
-      ">
-        <div class="aa-dataset-products aa-right-column"></div>
+      [[# with.pages ]] aa-with-pages [[/ with.pages ]]
+      [[^ with.pages ]] aa-without-pages [[/ with.pages ]]
+    ">
+      <div class="aa-dataset-products aa-right-column"></div>
 
-        <div class="aa-left-column">
-          <div class="aa-collections">
-            <div class="aa-collections-header">
-              Collections
-            </div>
-            <div class="aa-dataset-collections"></div>
+      <div class="aa-left-column">
+        <div class="aa-collections">
+          <div class="aa-collections-header">
+            Collections
           </div>
+          <div class="aa-dataset-collections"></div>
+        </div>
 
-          <div class="aa-articles">
-            <div class="aa-articles-header">
-              Blog posts
-            </div>
-            <div class="aa-dataset-articles"></div>
+        <div class="aa-articles">
+          <div class="aa-articles-header">
+            Blog posts
           </div>
+          <div class="aa-dataset-articles"></div>
+        </div>
 
-          <div class="aa-pages">
-            <div class="aa-pages-header">
-              Pages
-            </div>
-            <div class="aa-dataset-pages"></div>
+        <div class="aa-pages">
+          <div class="aa-pages-header">
+            Pages
           </div>
+          <div class="aa-dataset-pages"></div>
+        </div>
 
-          <div class="aa-powered-by">
-            <a
-              class="aa-powered-by-logo"
-              href="https://www.algolia.com/?utm_source=shopify&utm_medium=link&utm_campaign=autocomplete-[[ storeName ]]"
-            ></a>
-          </div>
+        <div class="aa-powered-by">
+          <a
+            class="aa-powered-by-logo"
+            href="https://www.algolia.com/?utm_source=shopify&utm_medium=link&utm_campaign=autocomplete-[[ storeName ]]"
+          ></a>
         </div>
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_autocomplete.css">
-      .algolia-autocomplete {
+    <script type="text/template" id="template_algolia_autocomplete.css">.algolia-autocomplete {
       box-sizing: border-box;
 
       background: white;
@@ -156,23 +161,23 @@
       color: black;
 
       text-align: left;
-      }
+    }
 
-      .aa-dropdown-menu .aa-highlight {
+    .aa-dropdown-menu .aa-highlight {
       color: black;
       font-weight: bold;
-      }
+    }
 
-      .aa-dropdown-menu .aa-cursor {
+    .aa-dropdown-menu .aa-cursor {
       cursor: pointer;
       background: #f8f8f8;
-      }
+    }
 
-      /* Resets */
-      .aa-dropdown-menu div,
-      .aa-dropdown-menu p,
-      .aa-dropdown-menu span,
-      .aa-dropdown-menu a {
+    /* Resets */
+    .aa-dropdown-menu div,
+    .aa-dropdown-menu p,
+    .aa-dropdown-menu span,
+    .aa-dropdown-menu a {
       box-sizing: border-box;
 
       margin: 0;
@@ -180,150 +185,150 @@
 
       line-height: 1;
       font-size: initial;
-      }
+    }
 
-      /* Links */
-      .aa-dropdown-menu a,
-      .aa-dropdown-menu a:hover,
-      .aa-dropdown-menu a:focus,
-      .aa-dropdown-menu a:active {
+    /* Links */
+    .aa-dropdown-menu a,
+    .aa-dropdown-menu a:hover,
+    .aa-dropdown-menu a:focus,
+    .aa-dropdown-menu a:active {
       font-weight: initial;
       font-style: initial;
       text-decoration: initial;
 
       color: [[ colors.main ]];
-      }
+    }
 
-      .aa-dropdown-menu a:hover,
-      .aa-dropdown-menu a:focus,
-      .aa-dropdown-menu a:active {
+    .aa-dropdown-menu a:hover,
+    .aa-dropdown-menu a:focus,
+    .aa-dropdown-menu a:active {
       text-decoration: underline;
-      }
+    }
 
-      /* Column layout */
-      .aa-dropdown-menu .aa-left-column,
-      .aa-dropdown-menu .aa-right-column {
+    /* Column layout */
+    .aa-dropdown-menu .aa-left-column,
+    .aa-dropdown-menu .aa-right-column {
       position: relative;
 
       padding: 24px 24px 0 24px;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-left-column,
-      .aa-dropdown-menu-size-xs .aa-right-column,
-      .aa-dropdown-menu-size-sm .aa-left-column,
-      .aa-dropdown-menu-size-sm .aa-right-column {
+    .aa-dropdown-menu-size-xs .aa-left-column,
+    .aa-dropdown-menu-size-xs .aa-right-column,
+    .aa-dropdown-menu-size-sm .aa-left-column,
+    .aa-dropdown-menu-size-sm .aa-right-column {
       padding: 24px 12px 0 12px;
-      }
+    }
 
-      .aa-dropdown-menu .aa-with-powered-by .aa-left-column {
+    .aa-dropdown-menu .aa-with-powered-by .aa-left-column {
       padding-bottom: 48px;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-left-column,
-      .aa-dropdown-menu-size-sm .aa-left-column {
+    .aa-dropdown-menu-size-xs .aa-left-column,
+    .aa-dropdown-menu-size-sm .aa-left-column {
       padding-top: 0;
       padding-bottom: 32px;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-without-powered-by .aa-left-column,
-      .aa-dropdown-menu-size-sm .aa-without-powered-by .aa-left-column {
+    .aa-dropdown-menu-size-xs .aa-without-powered-by .aa-left-column,
+    .aa-dropdown-menu-size-sm .aa-without-powered-by .aa-left-column {
       padding-bottom: 0;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-columns-container {
+    .aa-dropdown-menu-size-lg .aa-columns-container {
       direction: rtl;
 
       width: 100%;
 
       display: table;
       table-layout: fixed;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-left-column,
-      .aa-dropdown-menu-size-lg .aa-right-column {
+    .aa-dropdown-menu-size-lg .aa-left-column,
+    .aa-dropdown-menu-size-lg .aa-right-column {
       display: table-cell;
       direction: ltr;
       vertical-align: top;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-left-column {
+    .aa-dropdown-menu-size-lg .aa-left-column {
       width: 30%;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-without-articles.aa-without-collections .aa-left-column {
+    .aa-dropdown-menu-size-lg .aa-without-articles.aa-without-collections .aa-left-column {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-without-products .aa-left-column {
+    .aa-dropdown-menu-size-lg .aa-without-products .aa-left-column {
       width: 100%;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-right-column {
+    .aa-dropdown-menu-size-lg .aa-right-column {
       width: 70%;
       border-left: 1px solid #ebebeb;
 
       padding-bottom: 64px;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-without-footer .aa-right-column {
+    .aa-dropdown-menu-size-lg .aa-without-footer .aa-right-column {
       padding-bottom: 0;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-without-articles.aa-without-collections .aa-right-column {
+    .aa-dropdown-menu-size-lg .aa-without-articles.aa-without-collections .aa-right-column {
       width: 100%;
       border-left: none;
-      }
+    }
 
-      .aa-dropdown-menu-size-lg .aa-without-products .aa-right-column {
+    .aa-dropdown-menu-size-lg .aa-without-products .aa-right-column {
       display: none;
-      }
+    }
 
-      /* Products group */
-      .aa-dropdown-menu .aa-dataset-products .aa-suggestions:after {
+    /* Products group */
+    .aa-dropdown-menu .aa-dataset-products .aa-suggestions:after {
       content: '';
       display: block;
       clear: both;
-      }
+    }
 
-      .aa-dropdown-menu .aa-without-products .aa-dataset-products {
+    .aa-dropdown-menu .aa-without-products .aa-dataset-products {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu .aa-products-empty {
+    .aa-dropdown-menu .aa-products-empty {
       margin-bottom: 16px;
-      }
+    }
 
-      .aa-dropdown-menu .aa-products-empty .aa-no-result {
+    .aa-dropdown-menu .aa-products-empty .aa-no-result {
       color: [[ colors.secondary ]];
-      }
+    }
 
-      .aa-dropdown-menu .aa-products-empty .aa-see-all {
+    .aa-dropdown-menu .aa-products-empty .aa-see-all {
       margin-top: 8px;
-      }
+    }
 
-      /* Product */
-      .aa-dropdown-menu .aa-dataset-products .aa-suggestion {
+    /* Product */
+    .aa-dropdown-menu .aa-dataset-products .aa-suggestion {
       float: left;
 
       width: 50%;
 
       margin-bottom: 16px;
       margin-top: -4px; /* -$v_padding */
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-dataset-products .aa-suggestion,
-      .aa-dropdown-menu-size-sm .aa-dataset-products .aa-suggestion {
+    .aa-dropdown-menu-size-xs .aa-dataset-products .aa-suggestion,
+    .aa-dropdown-menu-size-sm .aa-dataset-products .aa-suggestion {
       width: 100%;
-      }
+    }
 
-      .aa-dropdown-menu .aa-product {
+    .aa-dropdown-menu .aa-product {
       position: relative;
       min-height: 56px; /* $img_size + 2 * $v_padding */
 
       padding: 4px 16px; /* $v_padding, $h_padding */
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-picture {
+    .aa-dropdown-menu .aa-product-picture {
       position: absolute;
 
       width: 48px; /* $img_size */
@@ -335,39 +340,39 @@
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-text {
+    .aa-dropdown-menu .aa-product-text {
       margin-left: 64px; /* $img_size + $h_padding */
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-product {
+    .aa-dropdown-menu-size-xs .aa-product {
       padding: 4px;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-product-picture {
+    .aa-dropdown-menu-size-xs .aa-product-picture {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-product-text {
+    .aa-dropdown-menu-size-xs .aa-product-text {
       margin: 0;
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-info {
+    .aa-dropdown-menu .aa-product-info {
       font-size: 0.85em;
       color: [[ colors.secondary ]];
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-info .aa-highlight {
+    .aa-dropdown-menu .aa-product-info .aa-highlight {
       font-size: 1em;
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-price {
+    .aa-dropdown-menu .aa-product-price {
       color: [[ colors.main ]];
-      }
+    }
 
-      .aa-dropdown-menu .aa-product-title,
-      .aa-dropdown-menu .aa-product-info {
+    .aa-dropdown-menu .aa-product-title,
+    .aa-dropdown-menu .aa-product-info {
       width: 100%;
 
       margin-top: -0.4em;
@@ -377,36 +382,36 @@
       text-overflow: ellipsis;
 
       line-height: 1.5;
-      }
+    }
 
-      /* Collections, Articles & Pages */
-      .aa-dropdown-menu .aa-without-collections .aa-collections {
+    /* Collections, Articles & Pages */
+    .aa-dropdown-menu .aa-without-collections .aa-collections {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu .aa-without-articles .aa-articles {
+    .aa-dropdown-menu .aa-without-articles .aa-articles {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu .aa-without-pages .aa-pages {
+    .aa-dropdown-menu .aa-without-pages .aa-pages {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu .aa-collections,
-      .aa-dropdown-menu .aa-articles,
-      .aa-dropdown-menu .aa-pages {
+    .aa-dropdown-menu .aa-collections,
+    .aa-dropdown-menu .aa-articles,
+    .aa-dropdown-menu .aa-pages {
       margin-bottom: 24px;
-      }
+    }
 
-      .aa-dropdown-menu .aa-collections-empty .aa-no-result,
-      .aa-dropdown-menu .aa-articles-empty .aa-no-result,
-      .aa-dropdown-menu .aa-pages-empty .aa-no-result {
+    .aa-dropdown-menu .aa-collections-empty .aa-no-result,
+    .aa-dropdown-menu .aa-articles-empty .aa-no-result,
+    .aa-dropdown-menu .aa-pages-empty .aa-no-result {
       opacity: 0.7;
-      }
+    }
 
-      .aa-dropdown-menu .aa-collections-header,
-      .aa-dropdown-menu .aa-articles-header,
-      .aa-dropdown-menu .aa-pages-header {
+    .aa-dropdown-menu .aa-collections-header,
+    .aa-dropdown-menu .aa-articles-header,
+    .aa-dropdown-menu .aa-pages-header {
       margin-bottom: 8px;
 
       text-transform: uppercase;
@@ -414,17 +419,17 @@
       font-size: 0.8em;
 
       color: [[ colors.secondary ]];
-      }
+    }
 
-      .aa-dropdown-menu .aa-collection,
-      .aa-dropdown-menu .aa-article,
-      .aa-dropdown-menu .aa-page {
+    .aa-dropdown-menu .aa-collection,
+    .aa-dropdown-menu .aa-article,
+    .aa-dropdown-menu .aa-page {
       padding: 4px;
-      }
+    }
 
-      /* Footer */
+    /* Footer */
 
-      .aa-dropdown-menu .aa-footer {
+    .aa-dropdown-menu .aa-footer {
       display: block;
 
       width: 100%;
@@ -436,21 +441,21 @@
       padding: 16px 48px;
 
       background-color: #f8f8f8;
-      }
+    }
 
-      .aa-dropdown-menu-size-xs .aa-footer,
-      .aa-dropdown-menu-size-sm .aa-footer,
-      .aa-dropdown-menu-size-md .aa-footer {
+    .aa-dropdown-menu-size-xs .aa-footer,
+    .aa-dropdown-menu-size-sm .aa-footer,
+    .aa-dropdown-menu-size-md .aa-footer {
       display: none;
-      }
+    }
 
-      /* Powered By */
+    /* Powered By */
 
-      .aa-dropdown-menu .aa-without-powered-by .aa-powered-by {
+    .aa-dropdown-menu .aa-without-powered-by .aa-powered-by {
       display: none;
-      }
+    }
 
-      .aa-dropdown-menu .aa-powered-by {
+    .aa-dropdown-menu .aa-powered-by {
       width: 100%;
 
       position: absolute;
@@ -460,9 +465,9 @@
       text-align: center;
       font-size: 0.8em;
       color: [[ colors.secondary ]];
-      }
+    }
 
-      .aa-dropdown-menu .aa-powered-by-logo {
+    .aa-dropdown-menu .aa-powered-by-logo {
       display: inline-block;
 
       width: 142px;
@@ -473,1143 +478,1033 @@
       background-position: center center;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjgiIGhlaWdodD0iMjQiPjxnIGZpbGw9Im5vbmUiPjxwYXRoIGZpbGw9IiM1NDY4RkYiIGQ9Ik03OC45ODguOTM4aDE2LjU5NGEyLjk2OCAyLjk2OCAwIDAxMi45NjYgMi45NjZWMjAuNWEyLjk2NyAyLjk2NyAwIDAxLTIuOTY2IDIuOTY0SDc4Ljk4OGEyLjk2NyAyLjk2NyAwIDAxLTIuOTY2LTIuOTY0VjMuODk3QTIuOTYxIDIuOTYxIDAgMDE3OC45ODguOTM4em00MS45MzcgMTcuODY2Yy00LjM4Ni4wMi00LjM4Ni0zLjU0LTQuMzg2LTQuMTA2bC0uMDA3LTEzLjMzNiAyLjY3NS0uNDI0djEzLjI1NGMwIC4zMjIgMCAyLjM1OCAxLjcxOCAyLjM2NHYyLjI0OHptLTEwLjg0Ni0yLjE4Yy44MjEgMCAxLjQzLS4wNDcgMS44NTUtLjEyOXYtMi43MTlhNi4zMzQgNi4zMzQgMCAwMC0xLjU3NC0uMTk5IDUuNyA1LjcgMCAwMC0uODk3LjA2OSAyLjY5OSAyLjY5OSAwIDAwLS44MTQuMjRjLS4yNC4xMTYtLjQzOS4yOC0uNTgyLjQ5MS0uMTUuMjEyLS4yMTkuMzM1LS4yMTkuNjU2IDAgLjYyOC4yMTkuOTkxLjYxNiAxLjIzcy45MzguMzYyIDEuNjE1LjM2MnptLS4yMzMtOS43Yy44ODMgMCAxLjYyOS4xMDkgMi4yMzEuMzI4LjYwMi4yMTggMS4wODguNTI1IDEuNDQ0LjkxNS4zNjMuMzk2LjYwOS45MjIuNzYgMS40ODMuMTU3LjU2LjIzMiAxLjE3NS4yMzIgMS44NXY2Ljg3NGEzMi41IDMyLjUgMCAwMS0xLjg2OC4zMTRjLS44MzQuMTIzLTEuNzcyLjE4NS0yLjgxMy4xODUtLjY5IDAtMS4zMjctLjA2OS0xLjg5NS0uMTk4YTQuMDAxIDQuMDAxIDAgMDEtMS40NzEtLjYzNiAzLjA4NSAzLjA4NSAwIDAxLS45NTEtMS4xMzRjLS4yMjYtLjQ2NS0uMzQzLTEuMTItLjM0My0xLjgwMyAwLS42NTYuMTMtMS4wNzMuMzg0LTEuNTI1YTMuMjQgMy4yNCAwIDAxMS4wNDctMS4xMDZjLjQ0NS0uMjg3Ljk1LS40OTIgMS41MzItLjYxNWE4LjggOC44IDAgMDExLjgyLS4xODUgOC40MDQgOC40MDQgMCAwMTEuOTcyLjI0di0uNDM4YzAtLjMwNy0uMDM1LS42LS4xMS0uODc0YTEuODggMS44OCAwIDAwLS4zODQtLjczIDEuNzg0IDEuNzg0IDAgMDAtLjcyNC0uNDkzIDMuMTY0IDMuMTY0IDAgMDAtMS4xNDMtLjIwNWMtLjYxNiAwLTEuMTc3LjA3NS0xLjY5LjE2NGE3LjczNSA3LjczNSAwIDAwLTEuMjYuMzA3bC0uMzIxLTIuMTkyYy4zMzUtLjExNy44MzQtLjIzMyAxLjQ3OC0uMzQ5YTEwLjk4IDEwLjk4IDAgMDEyLjA3My0uMTc4em01Mi44NDIgOS42MjZjLjgyMiAwIDEuNDMtLjA0OCAxLjg1NC0uMTNWMTMuN2E2LjM0NyA2LjM0NyAwIDAwLTEuNTc0LS4xOTljLS4yOTQgMC0uNTk1LjAyMS0uODk2LjA2OWEyLjcgMi43IDAgMDAtLjgxNC4yNCAxLjQ2IDEuNDYgMCAwMC0uNTgyLjQ5MWMtLjE1LjIxMi0uMjE4LjMzNS0uMjE4LjY1NiAwIC42MjguMjE4Ljk5MS42MTUgMS4yMy40MDQuMjQ1LjkzOC4zNjIgMS42MTUuMzYyem0tLjIyNi05LjY5NGMuODgzIDAgMS42MjkuMTA4IDIuMjMxLjMyNy42MDIuMjE5IDEuMDg4LjUyNiAxLjQ0NC45MTUuMzU1LjM5LjYwOS45MjMuNzU5IDEuNDgzYTYuOCA2LjggMCAwMS4yMzMgMS44NTJ2Ni44NzNjLS40MS4wODgtMS4wMzQuMTktMS44NjguMzE0LS44MzQuMTIzLTEuNzcyLjE4NC0yLjgxMy4xODQtLjY5IDAtMS4zMjctLjA2OC0xLjg5NS0uMTk4YTQuMDAxIDQuMDAxIDAgMDEtMS40NzEtLjYzNSAzLjA4NSAzLjA4NSAwIDAxLS45NTEtMS4xMzRjLS4yMjYtLjQ2NS0uMzQzLTEuMTItLjM0My0xLjgwNCAwLS42NTYuMTMtMS4wNzMuMzg0LTEuNTI0LjI2LS40NS42MDgtLjgyIDEuMDQ3LTEuMTA3LjQ0NS0uMjg2Ljk1LS40OTEgMS41MzItLjYxNGE4LjgwMyA4LjgwMyAwIDAxMi43NTEtLjEzYy4zMjkuMDM0LjY3MS4wOTYgMS4wNC4xODV2LS40MzdhMy4zIDMuMyAwIDAwLS4xMDktLjg3NSAxLjg3MyAxLjg3MyAwIDAwLS4zODQtLjczMSAxLjc4NCAxLjc4NCAwIDAwLS43MjQtLjQ5MiAzLjE2NSAzLjE2NSAwIDAwLTEuMTQzLS4yMDVjLS42MTYgMC0xLjE3Ny4wNzUtMS42OS4xNjRhNy43NSA3Ljc1IDAgMDAtMS4yNi4zMDdsLS4zMjEtMi4xOTNjLjMzNS0uMTE2LjgzNC0uMjMyIDEuNDc4LS4zNDhhMTEuNjMzIDExLjYzMyAwIDAxMi4wNzMtLjE3N3ptLTguMDM0LTEuMjcxYTEuNjI2IDEuNjI2IDAgMDEtMS42MjgtMS42MmMwLS44OTUuNzI1LTEuNjIgMS42MjgtMS42Mi45MDQgMCAxLjYzLjcyNSAxLjYzIDEuNjIgMCAuODk1LS43MzMgMS42Mi0xLjYzIDEuNjJ6bTEuMzQ4IDEzLjIyaC0yLjY4OVY3LjI3bDIuNjktLjQyM3YxMS45NTZ6bS00LjcxNCAwYy00LjM4Ni4wMi00LjM4Ni0zLjU0LTQuMzg2LTQuMTA3bC0uMDA4LTEzLjMzNiAyLjY3Ni0uNDI0djEzLjI1NGMwIC4zMjIgMCAyLjM1OCAxLjcxOCAyLjM2NHYyLjI0OHptLTguNjk4LTUuOTAzYzAtMS4xNTYtLjI1My0yLjExOS0uNzQ2LTIuNzg4LS40OTMtLjY3Ny0xLjE4My0xLjAxLTIuMDY3LTEuMDEtLjg4MiAwLTEuNTc0LjMzMy0yLjA2NSAxLjAxLS40OTMuNjc2LS43MzMgMS42MzItLjczMyAyLjc4OCAwIDEuMTY4LjI0NiAxLjk1My43NCAyLjYzLjQ5Mi42ODMgMS4xODMgMS4wMTggMi4wNjYgMS4wMTguODgyIDAgMS41NzQtLjM0MiAyLjA2Ny0xLjAxOS40OTItLjY4My43MzgtMS40Ni43MzgtMi42M3ptMi43MzctLjAwN2MwIC45MDItLjEzIDEuNTg0LS4zOTcgMi4zM2E1LjUyIDUuNTIgMCAwMS0xLjEyOCAxLjkwNiA0Ljk4NiA0Ljk4NiAwIDAxLTEuNzUyIDEuMjIzYy0uNjg1LjI4Ni0xLjczOS40NS0yLjI2NS40NS0uNTI4LS4wMDYtMS41NzQtLjE1Ny0yLjI1Mi0uNDVhNS4wOTYgNS4wOTYgMCAwMS0xLjc0NC0xLjIyM2MtLjQ4Ny0uNTI3LS44NjMtMS4xNjItMS4xMzctMS45MDZhNi4zNDUgNi4zNDUgMCAwMS0uNDEtMi4zM2MwLS45MDIuMTIzLTEuNzcuMzk3LTIuNTA4YTUuNTU0IDUuNTU0IDAgMDExLjE1LTEuODkyIDUuMTMzIDUuMTMzIDAgMDExLjc1LTEuMjE2Yy42NzktLjI4NyAxLjQyNS0uNDIzIDIuMjMyLS40MjMuODA4IDAgMS41NTMuMTQyIDIuMjM3LjQyM2E0Ljg4IDQuODggMCAwMTEuNzUzIDEuMjE2IDUuNjQ0IDUuNjQ0IDAgMDExLjEzNSAxLjg5MmMuMjg3LjczOC40MzEgMS42MDYuNDMxIDIuNTA4em0tMjAuMTM4IDBjMCAxLjEyLjI0NiAyLjM2My43MzggMi44ODIuNDkzLjUyIDEuMTMuNzggMS45MS43OC40MjQgMCAuODI4LS4wNjIgMS4yMDQtLjE3OC4zNzctLjExNi42NzctLjI1My45MTctLjQxN1Y5LjMzYTEwLjQ3NiAxMC40NzYgMCAwMC0xLjc2Ni0uMjI2Yy0uOTcxLS4wMjgtMS43MS4zNy0yLjIzIDEuMDA0LS41MTMuNjM2LS43NzMgMS43NS0uNzczIDIuNzg4em03LjQzOCA1LjI3NGMwIDEuODI0LS40NjYgMy4xNTYtMS40MDQgNC4wMDQtLjkzNi44NDYtMi4zNjcgMS4yNy00LjI5NiAxLjI3LS43MDUgMC0yLjE3LS4xMzctMy4zNC0uMzk2bC40MzEtMi4xMThjLjk4LjIwNSAyLjI3Mi4yNiAyLjk1LjI2IDEuMDc0IDAgMS44NC0uMjE5IDIuMjk5LS42NTYuNDU5LS40MzcuNjg0LTEuMDg2LjY4NC0xLjk0OHYtLjQzN2E4LjA3IDguMDcgMCAwMS0xLjA0Ny4zOTdjLS40My4xMy0uOTMuMTk4LTEuNDkyLjE5OC0uNzM5IDAtMS40MS0uMTE2LTIuMDE4LS4zNDlhNC4yMDYgNC4yMDYgMCAwMS0xLjU2Ny0xLjAyNWMtLjQzMS0uNDUtLjc3NC0xLjAxNy0xLjAxMy0xLjY5NC0uMjQtLjY3Ny0uMzYzLTEuODg1LS4zNjMtMi43NzMgMC0uODM0LjEzLTEuODguMzg0LTIuNTc3LjI2LS42OTYuNjI5LTEuMjk4IDEuMTI5LTEuNzk2LjQ5My0uNDk4IDEuMDk1LS44ODEgMS44LTEuMTYyYTYuNjA1IDYuNjA1IDAgMDEyLjQyOC0uNDU3Yy44NyAwIDEuNjcuMTA5IDIuNDUuMjQuNzguMTI5IDEuNDQ0LjI2NSAxLjk4NS40MTVWMTguMTd6Ii8+PHBhdGggZmlsbD0iIzVENjQ5NCIgZD0iTTYuOTcyIDYuNjc3djEuNjI3Yy0uNzEyLS40NDYtMS41Mi0uNjctMi40MjUtLjY3LS41ODUgMC0xLjA0NS4xMy0xLjM4LjM5MWExLjI0IDEuMjQgMCAwMC0uNTAyIDEuMDNjMCAuNDI1LjE2NC43NjUuNDk0IDEuMDIuMzMuMjU2LjgzNS41MzIgMS41MTYuODMuNDQ3LjE5Mi43OTUuMzU2IDEuMDQ1LjQ5NS4yNS4xMzguNTM3LjMzMi44NjIuNTgyLjMyNC4yNS41NjMuNTQ4LjcxOC44OTQuMTU0LjM0NS4yMy43NDEuMjMgMS4xODggMCAuOTQ3LS4zMzQgMS42OTEtMS4wMDQgMi4yMzQtLjY3LjU0Mi0xLjUzNy44MTQtMi42MDEuODE0LTEuMTggMC0yLjE2LS4yMjktMi45MzYtLjY4NnYtMS43MDhjLjg0LjYyOCAxLjgxNC45NDIgMi45Mi45NDIuNTg1IDAgMS4wNDgtLjEzNiAxLjM4OC0uNDA3LjM0LS4yNzEuNTEtLjY0Ni41MS0xLjEyNSAwLS4yODctLjEtLjU1LS4zMDItLjc5LS4yMDMtLjI0LS40Mi0uNDItLjY1NS0uNTQyLS4yMzQtLjEyMy0uNTg1LS4yOS0xLjA1My0uNTAzYTYxLjI3IDYxLjI3IDAgMDEtLjU4Mi0uMjcxIDEzLjY3IDEzLjY3IDAgMDEtLjU1LS4yODcgNC4yNzUgNC4yNzUgMCAwMS0uNTY3LS4zNTEgNi45MiA2LjkyIDAgMDEtLjQ1NS0uNGMtLjE4LS4xNy0uMzEtLjM0LS4zOS0uNTEtLjA4LS4xNy0uMTU1LS4zNy0uMjI0LS41OThhMi41NTMgMi41NTMgMCAwMS0uMTA0LS43NDJjMC0uOTE1LjMzMy0xLjYzOC45OTgtMi4xNy42NjQtLjUzMiAxLjUyMy0uNzk4IDIuNTc2LS43OTguOTY4IDAgMS43OTMuMTcgMi40NzMuNTF6bTcuNDY4IDUuNjk2di0uMjg3Yy0uMDIyLS42MDctLjE4Ny0xLjA4OC0uNDk1LTEuNDQ0LS4zMDktLjM1Ny0uNzUtLjUzNS0xLjMyNC0uNTM1LS41MzIgMC0uOTkuMTk0LTEuMzczLjU4My0uMzgyLjM4OC0uNjIyLjk0OS0uNzE3IDEuNjgzaDMuOTA5em0xLjAwNSAyLjc5MnYxLjQwNGMtLjU5Ni4zNC0xLjM4My41MS0yLjM2Mi41MS0xLjI1NSAwLTIuMjU1LS4zNzctMy0xLjEzMi0uNzQ0LS43NTUtMS4xMTYtMS43NDQtMS4xMTYtMi45NjggMC0xLjI5Ny4zNC0yLjMxNiAxLjAyMS0zLjA1NS42OC0uNzQgMS41NDgtMS4xMSAyLjYtMS4xMSAxLjAzMyAwIDEuODUyLjMyMyAyLjQ1OC45NjYuNjA2LjY0NC45MSAxLjU3Mi45MSAyLjc4NCAwIC4zMy0uMDMzLjY3Ni0uMDk2IDEuMDM4aC01LjMxNGMuMTA3LjcwMi40MDUgMS4yMzkuODk0IDEuNjExLjQ5LjM3MiAxLjEwNi41NTggMS44NS41NTguODYyIDAgMS41OC0uMjAyIDIuMTU1LS42MDZ6bTYuNjA1LTEuNzdoLTEuMjEyYy0uNTk2IDAtMS4wNDUuMTE2LTEuMzQ5LjM1LS4zMDMuMjM0LS40NTQuNTMyLS40NTQuODk0IDAgLjM3Mi4xMTcuNjY0LjM1Ljg3Ny4yMzUuMjEzLjU3NS4zMiAxLjAyMi4zMi41MSAwIC45MTItLjE0MiAxLjIwNC0uNDI0LjI5My0uMjgxLjQ0LS42NTEuNDQtMS4xMDh2LS45MXptLTQuMDY4LTIuNTU0VjkuMzI1Yy42MjctLjM2MSAxLjQ1Ny0uNTQyIDIuNDg5LS41NDIgMi4xMTYgMCAzLjE3NSAxLjAyNiAzLjE3NSAzLjA4VjE3aC0xLjU0OHYtLjk1N2MtLjQxNS42OC0xLjE0MyAxLjAyLTIuMTg2IDEuMDItLjc2NiAwLTEuMzgtLjIyLTEuODQzLS42NjEtLjQ2Mi0uNDQyLS42OTQtMS4wMDMtLjY5NC0xLjY4NCAwLS43NzYuMjkzLTEuMzguODc4LTEuODEuNTg1LS40MzEgMS40MDQtLjY0NyAyLjQ1Ny0uNjQ3aDEuMzRWMTEuOGMwLS41NTQtLjEzMy0uOTcxLS4zOTktMS4yNTMtLjI2Ni0uMjgyLS43MDctLjQyMy0xLjMyNC0uNDIzYTQuMDcgNC4wNyAwIDAwLTIuMzQ1LjcxOHptOS4zMzMtMS45M3YxLjQyYy4zOTQtMSAxLjEwMS0xLjUgMi4xMjMtMS41LjE0OCAwIC4zMTMuMDE2LjQ5NC4wNDh2MS41MzFhMS44ODUgMS44ODUgMCAwMC0uNzUtLjE0M2MtLjU0MiAwLS45ODkuMjQtMS4zNC43MTgtLjM1MS40NzktLjUyNyAxLjA0OC0uNTI3IDEuNzA3VjE3aC0xLjU2M1Y4LjkxaDEuNTYzem01LjAxIDQuMDg0Yy4wMjIuODIuMjcyIDEuNDkyLjc1IDIuMDE5LjQ3OS41MjYgMS4xNS43OSAyLjAxLjc5LjYzOSAwIDEuMjM1LS4xNzYgMS43ODgtLjUyN3YxLjQwNGMtLjUyMS4zMTktMS4xODYuNDc5LTEuOTk1LjQ3OS0xLjI2NSAwLTIuMjc2LS40LTMuMDMxLTEuMTk3LS43NTUtLjc5OC0xLjEzMy0xLjc5Mi0xLjEzMy0yLjk4NCAwLTEuMTYuMzgtMi4xNTEgMS4xNC0yLjk3NS43NjEtLjgyNSAxLjc5LTEuMjM3IDMuMDg4LTEuMjM3LjcwMiAwIDEuMzQ2LjE0OSAxLjkzLjQ0N3YxLjQzNmEzLjI0MiAzLjI0MiAwIDAwLTEuNzctLjQ5NWMtLjg0IDAtMS41MTMuMjY2LTIuMDE5Ljc5OC0uNTA1LjUzMi0uNzU4IDEuMjEzLS43NTggMi4wNDJ6TTQwLjI0IDUuNzJ2NC41NzljLjQ1OC0xIDEuMjkzLTEuNSAyLjUwNS0xLjUuNzg3IDAgMS40Mi4yNDUgMS44OTkuNzM0LjQ3OS40OS43MTggMS4xNy43MTggMi4wNDJWMTdoLTEuNTY0di01LjEwNmMwLS41NTMtLjE0LS45OC0uNDIyLTEuMjg0LS4yODItLjMwMy0uNjUyLS40NTUtMS4xMS0uNDU1LS41MzEgMC0xLjAwMi4yMDItMS40MTEuNjA2LS40MS40MDUtLjYxNSAxLjAyMi0uNjE1IDEuODUxVjE3aC0xLjU2M1Y1LjcyaDEuNTYzem0xNC45NjYgMTAuMDJjLjU5NiAwIDEuMDk2LS4yNTMgMS41LS43NTguNDA0LS41MDYuNjA2LTEuMTU3LjYwNi0xLjk1NSAwLS45MTUtLjIwMi0xLjYyLS42MDYtMi4xMTQtLjQwNC0uNDk1LS45Mi0uNzQyLTEuNTQ4LS43NDItLjU1MyAwLTEuMDUuMjI0LTEuNDkxLjY3LS40NDIuNDQ3LS42NjIgMS4xMzMtLjY2MiAyLjA1OCAwIC45NTguMjEyIDEuNjcuNjM4IDIuMTM4LjQyNS40NjkuOTQ2LjcwMyAxLjU2My43MDN6TTUzLjAwNCA1LjcydjQuNDJjLjU3NC0uODk0IDEuMzg4LTEuMzQxIDIuNDQtMS4zNDEgMS4wMjIgMCAxLjg1Ny4zODMgMi41MDYgMS4xNDkuNjQ5Ljc2Ni45NzMgMS43ODEuOTczIDMuMDQ3IDAgMS4xMzgtLjMwOSAyLjEwOS0uOTI1IDIuOTEyLS42MTcuODAzLTEuNDYzIDEuMjA1LTIuNTM3IDEuMjA1LTEuMDc1IDAtMS44OTQtLjQ0Ny0yLjQ1Ny0xLjM0VjE3aC0xLjU4VjUuNzJoMS41OHptOS45MDggMTEuMTA0bC0zLjIyMy03LjkxM2gxLjczOWwxLjAwNSAyLjYzMiAxLjI2IDMuNDE1Yy4wOTYtLjMyLjQ4LTEuNDU4IDEuMTUtMy40MTVsLjkwOS0yLjYzMmgxLjY2bC0yLjkyIDcuODY2Yy0uNzc3IDIuMDc0LTEuOTYzIDMuMTEtMy41NTkgMy4xMWEyLjkyIDIuOTIgMCAwMS0uNzM0LS4wNzl2LTEuMzRjLjE3LjA0Mi4zNTEuMDY0LjU0My4wNjQgMS4wMzIgMCAxLjc1NS0uNTcgMi4xNy0xLjcwOHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNODkuNjMyIDUuOTY3di0uNzcyYS45NzguOTc4IDAgMDAtLjk3OC0uOTc3aC0yLjI4YS45NzguOTc4IDAgMDAtLjk3OC45Nzd2Ljc5M2MwIC4wODguMDgyLjE1LjE3MS4xM2E3LjEyNyA3LjEyNyAwIDAxMS45ODQtLjI4Yy42NSAwIDEuMjk1LjA4OCAxLjkxNy4yNTkuMDgyLjAyLjE2NC0uMDQuMTY0LS4xM20tNi4yNDggMS4wMWwtLjM5LS4zODlhLjk3Ny45NzcgMCAwMC0xLjM4MiAwbC0uNDY1LjQ2NWEuOTczLjk3MyAwIDAwMCAxLjM4bC4zODMuMzgzYy4wNjIuMDYxLjE1LjA0Ny4yMDUtLjAxNC4yMjYtLjMwNy40NzItLjYwMS43NDYtLjg3NC4yODEtLjI4LjU2OC0uNTI2Ljg4My0uNzUxLjA2OC0uMDQyLjA3NS0uMTM3LjAyLS4ybTQuMTYgMi40NTN2My4zNDFjMCAuMDk2LjEwNC4xNjUuMTkyLjExN2wyLjk3LTEuNTM3Yy4wNjgtLjAzNC4wODktLjExNy4wNTUtLjE4NGEzLjY5NSAzLjY5NSAwIDAwLTMuMDgtMS44NjZjLS4wNjggMC0uMTM2LjA1NC0uMTM2LjEzbTAgOC4wNDhhNC40ODkgNC40ODkgMCAwMS00LjQ5LTQuNDgyIDQuNDg4IDQuNDg4IDAgMDE0LjQ5LTQuNDgyIDQuNDg4IDQuNDg4IDAgMDE0LjQ4OSA0LjQ4MiA0LjQ4NCA0LjQ4NCAwIDAxLTQuNDkgNC40ODJtMC0xMC44NWE2LjM2MyA2LjM2MyAwIDEwMCAxMi43MjkgNi4zNyA2LjM3IDAgMDA2LjM3Mi02LjM2OCA2LjM1OCA2LjM1OCAwIDAwLTYuMzcxLTYuMzYiLz48L2c+PC9zdmc+");
-      }
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMwIDE4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZT5zZWFyY2gtYnktYWxnb2xpYTwvdGl0bGU+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSItMzYuODY4JSIgeTE9IjEzNC45MzYlIiB4Mj0iMTI5LjQzMiUiIHkyPSItMjcuNyUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjMDBBRUZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzMzNjlFNyIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNTkuMzk5LjAyMmgxMy4yOTlhMi4zNzIgMi4zNzIgMCAwIDEgMi4zNzcgMi4zNjRWMTUuNjJhMi4zNzIgMi4zNzIgMCAwIDEtMi4zNzcgMi4zNjRINTkuMzk5YTIuMzcyIDIuMzcyIDAgMCAxLTIuMzc3LTIuMzY0VjIuMzgxQTIuMzY4IDIuMzY4IDAgMCAxIDU5LjM5OS4wMjJ6IiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTY2LjI1NyA0LjU2Yy0yLjgxNSAwLTUuMSAyLjI3Mi01LjEgNS4wNzggMCAyLjgwNiAyLjI4NCA1LjA3MiA1LjEgNS4wNzIgMi44MTUgMCA1LjEtMi4yNzIgNS4xLTUuMDc4IDAtMi44MDYtMi4yNzktNS4wNzItNS4xLTUuMDcyem0wIDguNjUyYy0xLjk4MyAwLTMuNTkzLTEuNjAyLTMuNTkzLTMuNTc0IDAtMS45NzIgMS42MS0zLjU3NCAzLjU5My0zLjU3NCAxLjk4MyAwIDMuNTkzIDEuNjAyIDMuNTkzIDMuNTc0YTMuNTgyIDMuNTgyIDAgMCAxLTMuNTkzIDMuNTc0em0wLTYuNDE4djIuNjY0YzAgLjA3Ni4wODIuMTMxLjE1My4wOTNsMi4zNzctMS4yMjZjLjA1NS0uMDI3LjA3MS0uMDkzLjA0NC0uMTQ3YTIuOTYgMi45NiAwIDAgMC0yLjQ2NS0xLjQ4N2MtLjA1NSAwLS4xMS4wNDQtLjExLjEwNGwuMDAxLS4wMDF6bS0zLjMzLTEuOTU2bC0uMzEyLS4zMTFhLjc4My43ODMgMCAwIDAtMS4xMDYgMGwtLjM3Mi4zN2EuNzczLjc3MyAwIDAgMCAwIDEuMTAxbC4zMDcuMzA1Yy4wNDkuMDQ5LjEyMS4wMzguMTY0LS4wMTEuMTgxLS4yNDUuMzc4LS40NzkuNTk3LS42OTcuMjI1LS4yMjMuNDU1LS40Mi43MDctLjU5OS4wNTUtLjAzMy4wNi0uMTA5LjAxNi0uMTU4aC0uMDAxem01LjAwMS0uODA2di0uNjE2YS43ODEuNzgxIDAgMCAwLS43ODMtLjc3OWgtMS44MjRhLjc4Ljc4IDAgMCAwLS43ODMuNzc5di42MzJjMCAuMDcxLjA2Ni4xMi4xMzcuMTA0YTUuNzM2IDUuNzM2IDAgMCAxIDEuNTg4LS4yMjNjLjUyIDAgMS4wMzUuMDcxIDEuNTM0LjIwN2EuMTA2LjEwNiAwIDAgMCAuMTMxLS4xMDR6IiBmaWxsPSIjRkZGIi8+PHBhdGggZD0iTTEwMi4xNjIgMTMuNzYyYzAgMS40NTUtLjM3MiAyLjUxNy0xLjEyMyAzLjE5My0uNzUuNjc2LTEuODk1IDEuMDEzLTMuNDQgMS4wMTMtLjU2NCAwLTEuNzM2LS4xMDktMi42NzMtLjMxNmwuMzQ1LTEuNjg5Yy43ODMuMTYzIDEuODE5LjIwNyAyLjM2MS4yMDcuODYgMCAxLjQ3My0uMTc0IDEuODQtLjUyMy4zNjctLjM0OS41NDgtLjg2Ni41NDgtMS41NTN2LS4zNDlhNi4zNzQgNi4zNzQgMCAwIDEtLjgzOC4zMTYgNC4xNTEgNC4xNTEgMCAwIDEtMS4xOTQuMTU4IDQuNTE1IDQuNTE1IDAgMCAxLTEuNjE2LS4yNzggMy4zODUgMy4zODUgMCAwIDEtMS4yNTQtLjgxNyAzLjc0NCAzLjc0NCAwIDAgMS0uODExLTEuMzUxYy0uMTkyLS41MzktLjI5LTEuNTA0LS4yOS0yLjIxMiAwLS42NjUuMTA0LTEuNDk4LjMwNy0yLjA1NGEzLjkyNSAzLjkyNSAwIDAgMSAuOTA0LTEuNDMzIDQuMTI0IDQuMTI0IDAgMCAxIDEuNDQxLS45MjYgNS4zMSA1LjMxIDAgMCAxIDEuOTQ1LS4zNjVjLjY5NiAwIDEuMzM3LjA4NyAxLjk2MS4xOTFhMTUuODYgMTUuODYgMCAwIDEgMS41ODguMzMydjguNDU2aC0uMDAxem0tNS45NTQtNC4yMDZjMCAuODkzLjE5NyAxLjg4NS41OTIgMi4yOTkuMzk0LjQxNC45MDQuNjIxIDEuNTI4LjYyMS4zNCAwIC42NjMtLjA0OS45NjQtLjE0MmEyLjc1IDIuNzUgMCAwIDAgLjczNC0uMzMydi01LjI5YTguNTMxIDguNTMxIDAgMCAwLTEuNDEzLS4xOGMtLjc3OC0uMDIyLTEuMzY5LjI5NC0xLjc4Ni44MDEtLjQxMS41MDctLjYxOSAxLjM5NS0uNjE5IDIuMjIzem0xNi4xMiAwYzAgLjcxOS0uMTA0IDEuMjY0LS4zMTggMS44NThhNC4zODkgNC4zODkgMCAwIDEtLjkwNCAxLjUyYy0uMzg5LjQyLS44NTQuNzQ2LTEuNDAyLjk3NS0uNTQ4LjIyOS0xLjM5MS4zNi0xLjgxMy4zNi0uNDIyLS4wMDUtMS4yNi0uMTI1LTEuODAyLS4zNmE0LjA4OCA0LjA4OCAwIDAgMS0xLjM5Ny0uOTc1IDQuNDg2IDQuNDg2IDAgMCAxLS45MDktMS41MiA1LjAzNyA1LjAzNyAwIDAgMS0uMzI5LTEuODU4YzAtLjcxOS4wOTktMS40MTEuMzE4LTEuOTk5LjIxOS0uNTg4LjUyNi0xLjA5LjkyLTEuNTA5LjM5NC0uNDIuODY1LS43NDEgMS40MDItLjk3YTQuNTQ3IDQuNTQ3IDAgMCAxIDEuNzg2LS4zMzggNC42OSA0LjY5IDAgMCAxIDEuNzkxLjMzOGMuNTQ4LjIyOSAxLjAxOS41NSAxLjQwMi45Ny4zODkuNDIuNjkuOTIxLjkwOSAxLjUwOS4yMy41ODguMzQ1IDEuMjguMzQ1IDEuOTk5aC4wMDF6bS0yLjE5MS4wMDVjMC0uOTIxLS4yMDMtMS42ODktLjU5Ny0yLjIyMy0uMzk0LS41MzktLjk0OC0uODA2LTEuNjU0LS44MDYtLjcwNyAwLTEuMjYuMjY3LTEuNjU0LjgwNi0uMzk0LjUzOS0uNTg2IDEuMzAyLS41ODYgMi4yMjMgMCAuOTMyLjE5NyAxLjU1OC41OTIgMi4wOTguMzk0LjU0NS45NDguODEyIDEuNjU0LjgxMi43MDcgMCAxLjI2LS4yNzIgMS42NTQtLjgxMi4zOTQtLjU0NS41OTItMS4xNjYuNTkyLTIuMDk4aC0uMDAxem02Ljk2MiA0LjcwN2MtMy41MTEuMDE2LTMuNTExLTIuODIyLTMuNTExLTMuMjc0TDExMy41ODMuOTI2bDIuMTQyLS4zMzh2MTAuMDAzYzAgLjI1NiAwIDEuODggMS4zNzUgMS44ODV2MS43OTJoLS4wMDF6bTMuNzc0IDBoLTIuMTUzVjUuMDcybDIuMTUzLS4zMzh2OS41MzR6bS0xLjA3OS0xMC41NDJjLjcxOCAwIDEuMzA0LS41NzggMS4zMDQtMS4yOTEgMC0uNzE0LS41ODEtMS4yOTEtMS4zMDQtMS4yOTEtLjcyMyAwLTEuMzA0LjU3OC0xLjMwNCAxLjI5MSAwIC43MTQuNTg2IDEuMjkxIDEuMzA0IDEuMjkxem02LjQzMSAxLjAxM2MuNzA3IDAgMS4zMDQuMDg3IDEuNzg2LjI2Mi40ODIuMTc0Ljg3MS40MiAxLjE1Ni43My4yODUuMzExLjQ4OC43MzUuNjA4IDEuMTgyLjEyNi40NDcuMTg2LjkzNy4xODYgMS40NzZ2NS40ODFhMjUuMjQgMjUuMjQgMCAwIDEtMS40OTUuMjUxYy0uNjY4LjA5OC0xLjQxOS4xNDctMi4yNTEuMTQ3YTYuODI5IDYuODI5IDAgMCAxLTEuNTE3LS4xNTggMy4yMTMgMy4yMTMgMCAwIDEtMS4xNzgtLjUwNyAyLjQ1NSAyLjQ1NSAwIDAgMS0uNzYxLS45MDRjLS4xODEtLjM3LS4yNzQtLjg5My0uMjc0LTEuNDM4IDAtLjUyMy4xMDQtLjg1NS4zMDctMS4yMTUuMjA4LS4zNi40ODctLjY1NC44MzgtLjg4M2EzLjYwOSAzLjYwOSAwIDAgMSAxLjIyNy0uNDkgNy4wNzMgNy4wNzMgMCAwIDEgMi4yMDItLjEwM2MuMjYzLjAyNy41MzcuMDc2LjgzMy4xNDd2LS4zNDljMC0uMjQ1LS4wMjctLjQ3OS0uMDg4LS42OTdhMS40ODYgMS40ODYgMCAwIDAtLjMwNy0uNTgzYy0uMTQ4LS4xNjktLjM0LS4zLS41ODEtLjM5MmEyLjUzNiAyLjUzNiAwIDAgMC0uOTE1LS4xNjNjLS40OTMgMC0uOTQyLjA2LTEuMzUzLjEzMS0uNDExLjA3MS0uNzUuMTUzLTEuMDA4LjI0NWwtLjI1Ny0xLjc0OWMuMjY4LS4wOTMuNjY4LS4xODUgMS4xODMtLjI3OGE5LjMzNSA5LjMzNSAwIDAgMSAxLjY2LS4xNDJsLS4wMDEtLjAwMXptLjE4MSA3LjczMWMuNjU3IDAgMS4xNDUtLjAzOCAxLjQ4NC0uMTA0di0yLjE2OGE1LjA5NyA1LjA5NyAwIDAgMC0xLjk3OC0uMTA0Yy0uMjQxLjAzMy0uNDYuMDk4LS42NTIuMTkxYTEuMTY3IDEuMTY3IDAgMCAwLS40NjYuMzkyYy0uMTIxLjE2OS0uMTc1LjI2Ny0uMTc1LjUyMyAwIC41MDEuMTc1Ljc5LjQ5My45ODEuMzIzLjE5Ni43NS4yODkgMS4yOTMuMjg5aC4wMDF6TTg0LjEwOSA0Ljc5NGMuNzA3IDAgMS4zMDQuMDg3IDEuNzg2LjI2Mi40ODIuMTc0Ljg3MS40MiAxLjE1Ni43My4yOS4zMTYuNDg3LjczNS42MDggMS4xODIuMTI2LjQ0Ny4xODYuOTM3LjE4NiAxLjQ3NnY1LjQ4MWEyNS4yNCAyNS4yNCAwIDAgMS0xLjQ5NS4yNTFjLS42NjguMDk4LTEuNDE5LjE0Ny0yLjI1MS4xNDdhNi44MjkgNi44MjkgMCAwIDEtMS41MTctLjE1OCAzLjIxMyAzLjIxMyAwIDAgMS0xLjE3OC0uNTA3IDIuNDU1IDIuNDU1IDAgMCAxLS43NjEtLjkwNGMtLjE4MS0uMzctLjI3NC0uODkzLS4yNzQtMS40MzggMC0uNTIzLjEwNC0uODU1LjMwNy0xLjIxNS4yMDgtLjM2LjQ4Ny0uNjU0LjgzOC0uODgzYTMuNjA5IDMuNjA5IDAgMCAxIDEuMjI3LS40OSA3LjA3MyA3LjA3MyAwIDAgMSAyLjIwMi0uMTAzYy4yNTcuMDI3LjUzNy4wNzYuODMzLjE0N3YtLjM0OWMwLS4yNDUtLjAyNy0uNDc5LS4wODgtLjY5N2ExLjQ4NiAxLjQ4NiAwIDAgMC0uMzA3LS41ODNjLS4xNDgtLjE2OS0uMzQtLjMtLjU4MS0uMzkyYTIuNTM2IDIuNTM2IDAgMCAwLS45MTUtLjE2M2MtLjQ5MyAwLS45NDIuMDYtMS4zNTMuMTMxLS40MTEuMDcxLS43NS4xNTMtMS4wMDguMjQ1bC0uMjU3LTEuNzQ5Yy4yNjgtLjA5My42NjgtLjE4NSAxLjE4My0uMjc4YTguODkgOC44OSAwIDAgMSAxLjY2LS4xNDJsLS4wMDEtLjAwMXptLjE4NiA3LjczNmMuNjU3IDAgMS4xNDUtLjAzOCAxLjQ4NC0uMTA0di0yLjE2OGE1LjA5NyA1LjA5NyAwIDAgMC0xLjk3OC0uMTA0Yy0uMjQxLjAzMy0uNDYuMDk4LS42NTIuMTkxYTEuMTY3IDEuMTY3IDAgMCAwLS40NjYuMzkyYy0uMTIxLjE2OS0uMTc1LjI2Ny0uMTc1LjUyMyAwIC41MDEuMTc1Ljc5LjQ5My45ODEuMzE4LjE5MS43NS4yODkgMS4yOTMuMjg5aC4wMDF6bTguNjgyIDEuNzM4Yy0zLjUxMS4wMTYtMy41MTEtMi44MjItMy41MTEtMy4yNzRMODkuNDYxLjkyNmwyLjE0Mi0uMzM4djEwLjAwM2MwIC4yNTYgMCAxLjg4IDEuMzc1IDEuODg1djEuNzkyaC0uMDAxeiIgZmlsbD0iIzE4MjM1OSIvPjxwYXRoIGQ9Ik01LjAyNyAxMS4wMjVjMCAuNjk4LS4yNTIgMS4yNDYtLjc1NyAxLjY0NC0uNTA1LjM5Ny0xLjIwMS41OTYtMi4wODkuNTk2LS44ODggMC0xLjYxNS0uMTM4LTIuMTgxLS40MTR2LTEuMjE0Yy4zNTguMTY4LjczOS4zMDEgMS4xNDEuMzk3LjQwMy4wOTcuNzc4LjE0NSAxLjEyNS4xNDUuNTA4IDAgLjg4NC0uMDk3IDEuMTI1LS4yOWEuOTQ1Ljk0NSAwIDAgMCAuMzYzLS43NzkuOTc4Ljk3OCAwIDAgMC0uMzMzLS43NDdjLS4yMjItLjIwNC0uNjgtLjQ0Ni0xLjM3NS0uNzI1LS43MTYtLjI5LTEuMjIxLS42MjEtMS41MTUtLjk5NC0uMjk0LS4zNzItLjQ0LS44Mi0uNDQtMS4zNDMgMC0uNjU1LjIzMy0xLjE3MS42OTgtMS41NDcuNDY2LS4zNzYgMS4wOS0uNTY0IDEuODc1LS41NjQuNzUyIDAgMS41LjE2NSAyLjI0NS40OTRsLS40MDggMS4wNDdjLS42OTgtLjI5NC0xLjMyMS0uNDQtMS44NjktLjQ0LS40MTUgMC0uNzMuMDktLjk0NS4yNzFhLjg5Ljg5IDAgMCAwLS4zMjIuNzE3YzAgLjIwNC4wNDMuMzc5LjEyOS41MjQuMDg2LjE0NS4yMjcuMjgyLjQyNC40MTEuMTk3LjEyOS41NTEuMjk5IDEuMDYzLjUxLjU3Ny4yNC45OTkuNDY0IDEuMjY4LjY3MS4yNjkuMjA4LjQ2Ni40NDIuNTkxLjcwNC4xMjUuMjYxLjE4OC41NjkuMTg4LjkyNGwtLjAwMS4wMDJ6bTMuOTggMi4yNGMtLjkyNCAwLTEuNjQ2LS4yNjktMi4xNjctLjgwOC0uNTIxLS41MzktLjc4Mi0xLjI4MS0uNzgyLTIuMjI2IDAtLjk3LjI0Mi0xLjczMy43MjUtMi4yODguNDgzLS41NTUgMS4xNDgtLjgzMyAxLjk5My0uODMzLjc4NCAwIDEuNDA0LjIzOCAxLjg1OC43MTQuNDU1LjQ3Ni42ODIgMS4xMzIuNjgyIDEuOTY2di42ODJINy4zNTdjLjAxOC41NzcuMTc0IDEuMDIuNDY3IDEuMzI5LjI5NC4zMS43MDcuNDY1IDEuMjQxLjQ2NS4zNTEgMCAuNjc4LS4wMzMuOTgtLjA5OWE1LjEgNS4xIDAgMCAwIC45NzUtLjMzdjEuMDI2YTMuODY1IDMuODY1IDAgMCAxLS45MzUuMzEyIDUuNzIzIDUuNzIzIDAgMCAxLTEuMDguMDkxbC4wMDItLjAwMXptLS4yMzEtNS4xOTljLS40MDEgMC0uNzIyLjEyNy0uOTY0LjM4MXMtLjM4Ni42MjUtLjQzMiAxLjExMmgyLjY5NmMtLjAwNy0uNDkxLS4xMjUtLjg2Mi0uMzU0LTEuMTE1LS4yMjktLjI1Mi0uNTQ0LS4zNzktLjk0NS0uMzc5bC0uMDAxLjAwMXptNy42OTIgNS4wOTJsLS4yNTItLjgyN2gtLjA0M2MtLjI4Ni4zNjItLjU3NS42MDgtLjg2NS43MzktLjI5LjEzMS0uNjYyLjE5Ni0xLjExNy4xOTYtLjU4NCAwLTEuMDM5LS4xNTgtMS4zNjctLjQ3My0uMzI4LS4zMTUtLjQ5MS0uNzYxLS40OTEtMS4zMzcgMC0uNjEyLjIyNy0xLjA3NC42ODItMS4zODYuNDU1LS4zMTIgMS4xNDgtLjQ4MiAyLjA3OS0uNTFsMS4wMjYtLjAzMnYtLjMxN2MwLS4zOC0uMDg5LS42NjMtLjI2Ni0uODUxLS4xNzctLjE4OC0uNDUyLS4yODItLjgyNC0uMjgyLS4zMDQgMC0uNTk2LjA0NS0uODc2LjEzNGE2LjY4IDYuNjggMCAwIDAtLjgwNi4zMTdsLS40MDgtLjkwMmE0LjQxNCA0LjQxNCAwIDAgMSAxLjA1OC0uMzg0IDQuODU2IDQuODU2IDAgMCAxIDEuMDg1LS4xMzJjLjc1NiAwIDEuMzI2LjE2NSAxLjcxMS40OTQuMzg1LjMyOS41NzcuODQ3LjU3NyAxLjU1MnY0LjAwMmgtLjkwMmwtLjAwMS0uMDAxem0tMS44OC0uODU5Yy40NTggMCAuODI2LS4xMjggMS4xMDQtLjM4NC4yNzgtLjI1Ni40MTYtLjYxNS40MTYtMS4wNzd2LS41MTZsLS43NjMuMDMyYy0uNTk0LjAyMS0xLjAyNy4xMjEtMS4yOTcuMjk4cy0uNDA2LjQ0OC0uNDA2LjgxNGMwIC4yNjUuMDc5LjQ3LjIzNi42MTUuMTU4LjE0NS4zOTQuMjE4LjcwOS4yMThoLjAwMXptNy41NTctNS4xODljLjI1NCAwIC40NjQuMDE4LjYyOC4wNTRsLS4xMjQgMS4xNzZhMi4zODMgMi4zODMgMCAwIDAtLjU1OS0uMDY0Yy0uNTA1IDAtLjkxNC4xNjUtMS4yMjcuNDk0LS4zMTMuMzI5LS40Ny43NTctLjQ3IDEuMjg0djMuMTA1aC0xLjI2MlY3LjIxOGguOTg4bC4xNjcgMS4wNDdoLjA2NGMuMTk3LS4zNTQuNDU0LS42MzYuNzcxLS44NDNhMS44MyAxLjgzIDAgMCAxIDEuMDIzLS4zMTJoLjAwMXptNC4xMjUgNi4xNTVjLS44OTkgMC0xLjU4Mi0uMjYyLTIuMDQ5LS43ODctLjQ2Ny0uNTI1LS43MDEtMS4yNzctLjcwMS0yLjI1OSAwLS45OTkuMjQ0LTEuNzY3LjczMy0yLjMwNC40ODktLjUzNyAxLjE5NS0uODA2IDIuMTE5LS44MDYuNjI3IDAgMS4xOTEuMTE2IDEuNjkyLjM0OWwtLjM4MSAxLjAxNWMtLjUzNC0uMjA4LS45NzQtLjMxMi0xLjMyMS0uMzEyLTEuMDI4IDAtMS41NDIuNjgyLTEuNTQyIDIuMDQ2IDAgLjY2Ni4xMjggMS4xNjYuMzg0IDEuNTAxLjI1Ni4zMzUuNjMxLjUwMiAxLjEyNS41MDJhMy4yMyAzLjIzIDAgMCAwIDEuNTk1LS40MTl2MS4xMDFhMi41MyAyLjUzIDAgMCAxLS43MjIuMjg1IDQuMzU2IDQuMzU2IDAgMCAxLS45MzIuMDg2di4wMDJ6bTguMjc3LS4xMDdoLTEuMjY4VjkuNTA2YzAtLjQ1OC0uMDkyLS44LS4yNzctMS4wMjYtLjE4NC0uMjI2LS40NzctLjMzOC0uODc4LS4zMzgtLjUzIDAtLjkxOS4xNTgtMS4xNjguNDc1LS4yNDkuMzE3LS4zNzMuODQ4LS4zNzMgMS41OTN2Mi45NDloLTEuMjYyVjQuODAxaDEuMjYydjIuMTIyYzAgLjM0LS4wMjEuNzA0LS4wNjQgMS4wOWguMDgxYTEuNzYgMS43NiAwIDAgMSAuNzE3LS42NjZjLjMwNi0uMTU4LjY2My0uMjM2IDEuMDcyLS4yMzYgMS40MzkgMCAyLjE1OS43MjUgMi4xNTkgMi4xNzV2My44NzNsLS4wMDEtLjAwMXptNy42NDktNi4wNDhjLjc0MSAwIDEuMzE5LjI2OSAxLjczMi44MDYuNDE0LjUzNy42MiAxLjI5MS42MiAyLjI2MSAwIC45NzQtLjIwOSAxLjczMi0uNjI4IDIuMjc1LS40MTkuNTQyLTEuMDAxLjgxNC0xLjc0Ni44MTQtLjc1MiAwLTEuMzM2LS4yNy0xLjc1MS0uODExaC0uMDg2bC0uMjMxLjcwNGgtLjk0NVY0LjgwMWgxLjI2MnYxLjk4N2wtLjAyMS42NTUtLjAzMi41NTNoLjA1NGMuNDAxLS41OTEuOTkyLS44ODYgMS43NzItLjg4NnptLS4zMjggMS4wMzFjLS41MDggMC0uODc1LjE0OS0xLjA5OC40NDgtLjIyNC4yOTktLjMzOS43OTktLjM0NiAxLjUwMXYuMDg2YzAgLjcyMy4xMTUgMS4yNDcuMzQ0IDEuNTcxLjIyOS4zMjQuNjAzLjQ4NiAxLjEyMy40ODYuNDQ4IDAgLjc4Ny0uMTc3IDEuMDE4LS41MzIuMjMxLS4zNTQuMzQ2LS44NjcuMzQ2LTEuNTM2IDAtMS4zNS0uNDYyLTIuMDI1LTEuMzg2LTIuMDI1bC0uMDAxLjAwMXptMy4yNDQtLjkyNGgxLjM3NWwxLjIwOSAzLjM2OGMuMTgzLjQ4LjMwNC45MzEuMzY1IDEuMzU0aC4wNDNjLjAzMi0uMTk3LjA5MS0uNDM2LjE3Ny0uNzE3LjA4Ni0uMjgxLjU0MS0xLjYxNiAxLjM2NC00LjAwNGgxLjM2NGwtMi41NDEgNi43M2MtLjQ2MiAxLjIzNS0xLjIzMiAxLjg1My0yLjMxIDEuODUzLS4yNzkgMC0uNTUxLS4wMy0uODE2LS4wOTF2LS45OTljLjE5LjA0My40MDYuMDY0LjY1LjA2NC42MDkgMCAxLjAzNy0uMzUzIDEuMjg0LTEuMDU4bC4yMi0uNTU5LTIuMzg1LTUuOTQxaC4wMDF6IiBmaWxsPSIjMUQzNjU3Ii8+PC9nPjwvc3ZnPg==);
+    }
     </script>
-    <script type="text/template" id="template_algolia_autocomplete_pages_empty">
-      <div class="aa-pages-empty">
-        <div class="aa-no-result">
-          [[ translations.noPageFound ]]
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_pages_empty"><div class="aa-pages-empty">
+      <div class="aa-no-result">
+        [[ translations.noPageFound ]]
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_autocomplete_page">
-      <div class="aa-page">
-        <div class="aa-picture" style="background-image: url('[[# helpers.iconImage ]][[/ helpers.iconImage ]]')"></div>
-        <div class="aa-text">
-          <span class="aa-title">[[& _highlightResult.title.value ]]</span>
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_page"><div class="aa-page">
+      <div class="aa-picture" style="background-image: url('[[# helpers.iconImage ]][[/ helpers.iconImage ]]')"></div>
+      <div class="aa-text">
+        <span class="aa-title">[[& _highlightResult.title.value ]]</span>
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_autocomplete_collection">
-      <div class="aa-collection">
-        <div class="aa-picture" style="background-image: url('[[# helpers.iconImage ]][[/ helpers.iconImage ]]')"></div>
-        <div class="aa-text">
-          <span class="aa-title">[[& _highlightResult.title.value ]]</span>
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_collection"><div class="aa-collection">
+      <div class="aa-picture" style="background-image: url('[[# helpers.iconImage ]][[/ helpers.iconImage ]]')"></div>
+      <div class="aa-text">
+        <span class="aa-title">[[& _highlightResult.title.value ]]</span>
       </div>
+    </div>
     </script>
-    <script
-      type="text/template"
-      id="template_algolia_autocomplete_collections_empty"
-    >
-      <div class="aa-collections-empty">
-        <div class="aa-no-result">
-          [[ translations.noCollectionFound ]]
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_collections_empty"><div class="aa-collections-empty">
+      <div class="aa-no-result">
+        [[ translations.noCollectionFound ]]
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_autocomplete_article">
-      <div class="aa-article">
-        <div class="aa-text">
-          <span class="aa-title">[[& _highlightResult.title.value ]]</span>
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_article"><div class="aa-article">
+      <div class="aa-text">
+        <span class="aa-title">[[& _highlightResult.title.value ]]</span>
       </div>
+    </div>
     </script>
-    <script
-      type="text/template"
-      id="template_algolia_autocomplete_articles_empty"
-    >
-      <div class="aa-articles-empty">
-        <div class="aa-no-result">
-          No article found
-        </div>
+    <script type="text/template" id="template_algolia_autocomplete_articles_empty"><div class="aa-articles-empty">
+      <div class="aa-no-result">
+        No article found
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_autocomplete_product">
-      <div data-algolia-index="[[ _index ]]" data-algolia-position="[[ _position ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" class="aa-product">
-        <div class="aa-product-picture" style="background-image: url('[[# helpers.thumbImage ]][[/ helpers.thumbImage ]]')"></div>
-        <div class="aa-product-text">
-          <p class="aa-product-title">
-            [[# helpers.fullHTMLTitle ]][[/ helpers.fullHTMLTitle ]]
-          </p>
-          <p class="aa-product-info">
-            [[# product_type ]]
-              [[& _highlightResult.product_type.value ]]
-            [[/ product_type ]]
-            [[# vendor ]]
-              [[# helpers.by ]] [[& _highlightResult.vendor.value ]] [[/ helpers.by ]]
-            [[/ vendor ]]
-          </p>
-          <p class="aa-product-price">
-            [[# helpers.autocompletePrice ]][[/ helpers.autocompletePrice ]]
-          </p>
-        </div>
-      </div>
-    </script>
-    <script
-      type="text/template"
-      id="template_algolia_autocomplete_products_empty"
-    >
-      <div class="aa-products-empty">
-        <p class="aa-no-result">
-          [[# helpers.no_result_for ]] "[[ query ]]" [[/ helpers.no_result_for]]
+    <script type="text/template" id="template_algolia_autocomplete_product"><div data-algolia-index="[[ _index ]]" data-algolia-position="[[ _position ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" class="aa-product">
+      <div class="aa-product-picture" style="background-image: url('[[# helpers.thumbImage ]][[/ helpers.thumbImage ]]')"></div>
+      <div class="aa-product-text">
+        <p class="aa-product-title">
+          [[# helpers.fullHTMLTitle ]][[/ helpers.fullHTMLTitle ]]
         </p>
+        <p class="aa-product-info">
+          [[# product_type ]]
+            [[& _highlightResult.product_type.value ]]
+          [[/ product_type ]]
+          [[# vendor ]]
+            [[# helpers.by ]] [[& _highlightResult.vendor.value ]] [[/ helpers.by ]]
+          [[/ vendor ]]
+        </p>
+        <p class="aa-product-price">
+          [[# helpers.autocompletePrice ]][[/ helpers.autocompletePrice ]]
+        </p>
+      </div>
+    </div>
+    </script>
+    <script type="text/template" id="template_algolia_autocomplete_products_empty"><div class="aa-products-empty">
+      <p class="aa-no-result">
+        [[# helpers.no_result_for ]] "[[ query ]]" [[/ helpers.no_result_for]]
+      </p>
 
-        <p class="aa-see-all">
-          <a href="/search?q=">
-            [[ translations.allProducts ]]
+      <p class="aa-see-all">
+        <a href="/search?q=">
+          [[ translations.allProducts ]]
+        </a>
+      </p>
+    </div>
+    </script>
+    <script type="text/template" id="template_algolia_autocomplete_footer"><div class="aa-footer">
+      [[ translations.allProducts ]]
+      <a class="aa-footer-link" href="/search?q=[[ query ]]">
+        [[ translations.matching ]]
+        <span class="aa-query">
+          "[[ query ]]"
+        </span>
+      </a>
+      (<span class="aa-nbhits">[[# helpers.formatNumber ]][[ nbHits ]][[/ helpers.formatNumber ]]</span>)
+    </div>
+    </script>
+    <script type="text/template" id="template_algolia_instant_search"><div class="ais-page">
+      <div class="ais-facets-button">
+        Show filters
+      </div>
+      <div class="ais-facets">
+          <div class="ais-clear-refinements-container"></div>
+          <div class="ais-current-refined-values-container"></div>
+        [[# facets ]]
+          <div class="ais-facet-[[ type ]] ais-facet-[[ escapedName ]]">
+            <div class="ais-range-slider--header ais-facet--header ais-header">[[ title ]]</div>
+            <div class="ais-facet-[[ escapedName ]]-container"></div>
+          </div>
+        [[/ facets ]]
+      </div>
+      <div class="ais-block">
+        <div class="ais-input">
+          <div class="ais-input--label">
+            [[ translations.search ]]
+          </div>
+          <div class="ais-search-box-container"></div>
+          <div class="ais-input-button">
+            <div class="ais-clear-input-icon"></div>
+            <a title="Search by Algolia - Click to know more" href="https://www.algolia.com/?utm_source=shopify&utm_medium=link&utm_campaign=instantsearch-[[ storeName ]]">
+              <div class="ais-algolia-icon"></div>
+            </a>
+          </div>
+        </div>
+        <div class="ais-search-header">
+          <div class="ais-stats-container"></div>
+          <div class="ais-change-display">
+            <span class="ais-change-display-block ais-change-display-selected"><i class="fa fa-th-large"></i></span>
+            <span class="ais-change-display-list"><i class="fa fa-th-list"></i></span>
+          </div>
+          <div class="ais-sort">
+            [[# multipleSortOrders ]]
+            [[ translations.sortBy ]] <span class="ais-sort-orders-container"></span>
+            [[/ multipleSortOrders ]]
+
+            [[^ multipleSortOrders ]]
+            [[ translations.sortBy ]] [[ translations.relevance ]]
+            [[/ multipleSortOrders ]]
+          </div>
+        </div>
+        <div class="ais-hits-container ais-results-as-block"></div>
+      </div>
+      <div class="ais-pagination-container"></div>
+    </div>
+    </script>
+    <script type="text/template" id="template_algolia_instant_search.css">.ais-page .aa-highlight {
+      color: black;
+      font-weight: bold;
+    }
+
+    /* Resets */
+    .ais-page div,
+    .ais-page p,
+    .ais-page span,
+    .ais-page a,
+    .ais-page ul,
+    .ais-page li,
+    .ais-page input {
+      box-sizing: border-box;
+
+      margin: 0;
+      padding: 0;
+
+      line-height: 1;
+      font-size: initial;
+    }
+
+    .ais-page input {
+      padding-left: 24px !important;
+    }
+
+    /* Links */
+    .ais-page .ais-link,
+    .ais-page a,
+    .ais-page a:hover,
+    .ais-page a:focus,
+    .ais-page a:active {
+      font-weight: initial;
+      font-style: initial;
+      text-decoration: initial;
+
+      color: [[ colors.main ]];
+
+      cursor: pointer;
+    }
+
+    .ais-page a:hover,
+    .ais-page a:focus,
+    .ais-page a:active,
+    .ais-page .ais-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Columns */
+    .ais-page .ais-facets {
+      width: 25%;
+      float: left;
+      padding-right: 8px;
+      position: relative;
+    }
+
+    .ais-page .ais-block {
+      width: 75%;
+      float: right;
+      padding-left: 8px;
+    }
+
+    .ais-results-size-xs .ais-page .ais-facets,
+    .ais-results-size-xs .ais-page .ais-block,
+    .ais-results-size-sm .ais-page .ais-facets,
+    .ais-results-size-sm .ais-page .ais-block {
+      width: 100%;
+      padding-left: 0px;
+    }
+
+    .ais-page .ais-Pagination-list {
+      clear: both;
+    }
+
+    /* Refine button */
+    .ais-page .ais-facets-button {
+      display: none;
+
+      margin: 16px 0;
+      padding: 8px;
+
+      border: 1px solid #e0e0e0;
+      text-align: center;
+
+      cursor: pointer;
+    }
+
+    .ais-results-size-xs .ais-page .ais-facets-button,
+    .ais-results-size-sm .ais-page .ais-facets-button {
+      display: block;
+    }
+
+    .ais-results-size-xs .ais-page .ais-facets,
+    .ais-results-size-sm .ais-page .ais-facets {
+      display: none;
+    }
+
+    .ais-results-size-xs .ais-page .ais-facets__shown,
+    .ais-results-size-sm .ais-page .ais-facets__shown {
+      display: block;
+    }
+
+    /* Facets */
+    .ais-page .ais-facet {
+      border: solid #e0e0e0;
+      border-width: 0 1px 1px;
+
+      margin-bottom: 16px;
+      padding: 8px;
+
+      color: #636363;
+    }
+
+    .ais-page .ais-facet a,
+    .ais-page .ais-facet a:hover,
+    .ais-page .ais-facet a:focus,
+    .ais-page .ais-facet a:active {
+      color: #666;
+    }
+
+    .ais-page .ais-facet--header {
+      border: solid #e0e0e0;
+      border-width: 1px 1px 0;
+
+      padding: 6px 8px;
+
+      background: #f4f4f4;
+
+      font-size: 0.95em;
+      color: #757575;
+      text-transform: uppercase;
+    }
+
+    .ais-page .ais-facet--body {
+      padding: 8px;
+    }
+
+    .ais-page .ais-facet--item {
+      position: relative;
+      width: 100%;
+
+      padding: 6px 50px 6px 0;
+
+      cursor: pointer;
+    }
+
+    .ais-page .ais-facet--label {
+      display: inline-block;
+      margin-top: -0.15em;
+      margin-bottom: -0.15em;
+
+      width: 100%;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      cursor: pointer;
+
+      line-height: 1.3;
+    }
+
+    .ais-page .ais-facet--count {
+      [[#distinct]]
+        display: none;
+      [[/distinct]]
+
+      position: absolute;
+
+      top: 6px;
+      right: 0px;
+
+      color: [[ colors.secondary ]];
+    }
+
+    .ais-page .ais-RefinementList-item--selected {
+      font-weight: bold;
+    }
+
+    .ais-page .ais-RefinementList-item--selected,
+    .ais-page .ais-facet--item:hover {
+      margin-left: -8px;
+      padding-left: 4px;
+      padding-right: 42px;
+
+      border-left: 4px solid [[ colors.main ]];
+    }
+
+    .ais-page .ais-RefinementList-item--selected .ais-facet--count,
+    .ais-page .ais-facet--item:hover .ais-facet--count {
+      right: -8px;
+    }
+
+    .ais-page .ais-CurrentRefinements {
+      position: relative;
+    }
+
+    .ais-page .ais-CurrentRefinements--header {
+      padding-right: 72px;
+    }
+
+    .ais-page .ais-clear-refinements-container {
+      position: absolute;
+      right: 11px;
+      top: 1px;
+    }
+
+    .ais-page .ais-ClearRefinements-button {
+      border: 0;
+      background: 0;
+      color: #666;
+    }
+
+    .ais-page .ais-ClearRefinements-button:hover {
+      text-decoration: underline;
+    }
+
+    .ais-page .ais-CurrentRefinements-label {
+      display: table;
+
+      width: 100%;
+      margin: 4px 0;
+
+      border: 1px solid #e0e0e0;
+
+      cursor: pointer;
+    }
+
+    .ais-page .ais-CurrentRefinements-label:before {
+      content: '\2a2f';
+      display: table-cell;
+      vertical-align: middle;
+
+      width: 0;
+      padding: 4px 6px;
+
+      background: #e0e0e0;
+    }
+
+    .ais-page .ais-CurrentRefinements-label div {
+      display: inline;
+    }
+
+    .ais-page .ais-CurrentRefinements-label > div {
+      display: table-cell;
+      vertical-align: middle;
+
+      margin-top: -0.15em;
+      margin-bottom: -0.15em;
+      padding: 4px 6px;
+
+      background: #f4f4f4;
+
+      width: 100%;
+      max-width: 1px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      line-height: 1.3;
+    }
+
+    .ais-page .ais-CurrentRefinements-label:hover {
+      text-decoration: none;
+    }
+
+    .ais-page .ais-CurrentRefinements-label:hover > div {
+      text-decoration: line-through;
+    }
+
+    .ais-page .ais-CurrentRefinements-label {
+      font-weight: bold;
+    }
+
+    .ais-RangeSlider .rheostat-tooltip {
+      display: none;
+      background: transparent;
+      position: absolute;
+      font-size: 0.8em;
+      transform: translate(-50%, -100%);
+      left: 50%;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+    .ais-page .ais-current-refined-values--link {
+      display: table;
+      width: 100%;
+      margin: 4px 0;
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+    }
+
+    .ais-page .ais-current-refined-values--link:hover {
+      text-decoration: none;
+    }
+
+    .ais-page .ais-current-refined-values--link:before {
+      content: '\2a2f';
+      display: table-cell;
+      vertical-align: middle;
+      width: 0;
+      padding: 4px 6px;
+      background: #e0e0e0;
+    }
+
+    .ais-page .ais-current-refined-values--link div {
+      display: inline;
+    }
+
+    .ais-page .ais-current-refined-values--link > div {
+      display: table-cell;
+      vertical-align: middle;
+      margin-top: -0.15em;
+      margin-bottom: -0.15em;
+      padding: 4px 6px;
+      background: #f4f4f4;
+      width: 100%;
+      max-width: 1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+    }
+
+    .ais-page .ais-current-refined-values--link:hover > div {
+      text-decoration: line-through;
+    }
+
+    .ais-page .ais-current-refined-values--label {
+      font-weight: bold;
+    }
+
+    .ais-RangeSlider .rheostat-handle:hover .rheostat-tooltip {
+      display: block;
+    }
+
+    .ais-RangeSlider .rheostat-handle {
+      background: #fff;
+      border-radius: 50%;
+      cursor: grab;
+      height: 20px;
+      outline: none;
+      transform: translate(-50%, calc(-50% + -3px));
+      border: 1px solid #ccc;
+      width: 20px;
+      z-index: 1;
+    }
+
+    .ais-RangeSlider .rheostat-value {
+      padding-top: 15px;
+      font-size: 0.8em;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+
+    .ais-RangeSlider .rheostat-horizontal {
+      cursor: pointer;
+      margin: 16px 16px 24px;
+    }
+
+    .ais-RangeSlider .rheostat-background {
+      background-color: rgba(65, 66, 71, 0.08);
+      border: 1px solid #ddd;
+      height: 6px;
+    }
+
+    .ais-RangeSlider .rheostat-progress {
+      background-color: [[ colors.main ]];
+      cursor: pointer;
+      height: 4px;
+      top: 1px;
+      position: absolute;
+    }
+
+    .ais-RangeSlider .rheostat-marker-horizontal {
+      background: #ddd;
+      width: 1px;
+      height: 5px;
+      pointer-events: none;
+    }
+
+    .ais-RangeSlider .rheostat-marker-large {
+      background: #ddd;
+      width: 2px;
+      height: 12px;
+    }
+
+    /* Search box */
+
+    .ais-page .ais-input {
+      display: table;
+      width: 100%;
+
+      border: 2px solid [[ colors.main ]];
+    }
+
+    .ais-page .ais-input--label {
+      display: table-cell;
+      vertical-align: middle;
+
+      width: 0;
+
+      padding: 8px;
+      padding-right: 24px;
+
+      white-space: nowrap;
+      color: white;
+      background: [[ colors.main ]];
+    }
+
+    .ais-results-size-xs .ais-page .ais-input--label {
+      display: none;
+    }
+
+    .ais-page .ais-search-box-container {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+    }
+
+    .ais-page .ais-SearchBox-input {
+      width: 100%;
+      padding: 8px 16px 8px 4px;
+
+      border: none;
+    }
+
+    .ais-page .ais-SearchBox-input::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    .ais-page .ais-SearchBox-input,
+    .ais-page .ais-SearchBox-input:focus {
+      outline: 0;
+      box-shadow: none;
+
+      height: 32px;
+      padding: 0 8px;
+    }
+
+    .ais-page .ais-input-button {
+      display: table-cell;
+      vertical-align: middle;
+
+      width: 0;
+      padding: 4px 8px;
+    }
+
+    .ais-page .ais-clear-input-icon,
+    .ais-page .ais-algolia-icon {
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      cursor: pointer;
+    }
+
+    .ais-page .ais-clear-input-icon {
+      display: none;
+
+      width: 16px;
+      height: 16px;
+
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBvcGFjaXR5PSIwLjYiPjxwYXRoIGQ9Ik0uNTY2IDEuNjk4TDAgMS4xMyAxLjEzMiAwbC41NjUuNTY2TDYgNC44NjggMTAuMzAyLjU2NiAxMC44NjggMCAxMiAxLjEzMmwtLjU2Ni41NjVMNy4xMzIgNmw0LjMwMiA0LjMuNTY2LjU2OEwxMC44NjggMTJsLS41NjUtLjU2Nkw2IDcuMTMybC00LjMgNC4zMDJMMS4xMyAxMiAwIDEwLjg2OGwuNTY2LS41NjVMNC44NjggNiAuNTY2IDEuNjk4eiIvPjwvc3ZnPg==');
+    }
+
+    .ais-page .ais-algolia-icon {
+      width: 24px;
+      height: 24px;
+
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOTUgOTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPmFsZ29saWEtbmV3LWxvZ288L3RpdGxlPjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iLTM3LjkwMSUiIHkxPSIxMzQuNzY4JSIgeDI9IjEzMC4xMTQlIiB5Mj0iLTI3LjgwMiUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjMDBBRUZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzMzNjlFNyIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSJ1cmwoI2EpIiB3aWR0aD0iOTQuMDQ1IiBoZWlnaHQ9Ijk0LjA3MiIgcng9IjEyLjM3NCIvPjxwYXRoIGQ9Ik00OC4xMjUgMjMuNzc1Yy0xNC42NzEgMC0yNi41OCAxMS44OTgtMjYuNTggMjYuNTg4IDAgMTQuNjkgMTEuODk1IDI2LjU4OCAyNi41OCAyNi41ODggMTQuNjg1IDAgMjYuNTgtMTEuOTEyIDI2LjU4LTI2LjYwMlM2Mi44MSAyMy43NzUgNDguMTI1IDIzLjc3NXptMCA0NS4zMDdjLTEwLjM0MyAwLTE4LjcyNy04LjM4Ni0xOC43MjctMTguNzMzIDAtMTAuMzQ2IDguMzg0LTE4LjczMiAxOC43MjctMTguNzMyIDEwLjM0NCAwIDE4LjcyNyA4LjM4NiAxOC43MjcgMTguNzMyIDAgMTAuMzQ3LTguMzgzIDE4LjczMy0xOC43MjcgMTguNzMzem0wLTMzLjZ2MTMuOTU1YzAgLjQwOC40MzYuNjguODAzLjQ5TDYxLjMgNDMuNTAxYS41NDguNTQ4IDAgMCAwIC4yMTctLjc2MmMtMi41NzItNC41MDYtNy4zMzUtNy41OTYtMTIuODM0LTcuOGEuNTQ5LjU0OSAwIDAgMC0uNTU4LjU0NHpNMzAuNzYgMjUuMjQ2bC0xLjYyLTEuNjJhNC4wODIgNC4wODIgMCAwIDAtNS43NyAwbC0xLjkzMyAxLjkzM2E0LjA4NSA0LjA4NSAwIDAgMCAwIDUuNzczbDEuNjA2IDEuNjA2Yy4yNDUuMjQ1LjY0LjIwNC44NDQtLjA2OGEzMC41NzIgMzAuNTcyIDAgMCAxIDMuMTE2LTMuNjYyIDI5LjcyMyAyOS43MjMgMCAwIDEgMy42ODktMy4xMzFjLjI3Mi0uMTkuMy0uNi4wNjgtLjgzem0yNi4wNjMtNC4yMzR2LTMuMjI2YTQuMDc4IDQuMDc4IDAgMCAwLTQuMDgzLTQuMDg0aC05LjVhNC4wNzggNC4wNzggMCAwIDAtNC4wODMgNC4wODR2My4zMDhjMCAuMzY4LjM1NC42MjYuNzA4LjUzMWEyOS41NjIgMjkuNTYyIDAgMCAxIDguMjc1LTEuMTU3YzIuNzIyIDAgNS40MDMuMzY3IDcuOTg5IDEuMDc1YS41NS41NSAwIDAgMCAuNjk0LS41M3oiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+);
+    }
+
+    /* Search header */
+    .ais-page .ais-search-header {
+      margin: 16px 0 8px 0;
+      padding: 0.6em 0.9em 0.4em 0.9em;
+
+      background: #f4f4f4;
+      color: [[ colors.secondary ]];
+    }
+
+    .ais-page .ais-search-header:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .ais-page .ais-search-header {
+      font-size: 0.85em;
+    }
+
+    .ais-page .ais-search-header * {
+      font-size: inherit;
+      line-height: 1.6;
+    }
+
+    /* Stats */
+    .ais-page .ais-Stats {
+      float: left;
+    }
+
+    .ais-page .ais-stats--nb-results {
+      font-weight: bold;
+    }
+
+    .ais-results-size-xs .ais-page .ais-Stats {
+      float: none;
+    }
+
+    /* Display mode */
+    .ais-page .ais-change-display {
+      float: right;
+
+      margin-left: 10px;
+
+      cursor: pointer;
+    }
+
+    .ais-page .ais-change-display-block:hover,
+    .ais-page .ais-change-display-list:hover,
+    .ais-page .ais-change-display-selected {
+      color: [[ colors.main ]];
+    }
+
+    /* Sort orders */
+    .ais-page .ais-sort {
+      float: right;
+    }
+
+    .ais-results-size-xs .ais-page .ais-sort {
+      float: none;
+    }
+
+    .ais-page .ais-SortBy {
+      display: inline-block;
+    }
+
+    .ais-page .ais-SortBy-select {
+      height: 1.6em;
+      padding: 0px 30px 0px 5px;
+      margin-top: -0.1em;
+    }
+
+    /* Hits */
+    .ais-page .ais-Hits:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .ais-page .ais-hit-empty {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .ais-page .ais-highlight {
+      position: relative;
+      z-index: 1;
+
+      font-weight: bold;
+    }
+
+    .ais-page .ais-highlight:before {
+      content: '';
+      position: absolute;
+
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background: [[ colors.main ]];
+      opacity: 0.1;
+    }
+
+    .ais-page .ais-hit {
+      position: relative;
+      float: left;
+      margin: 8px 0 16px 0;
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+    }
+
+    .ais-page .ais-hit:hover {
+      border-color: [[ colors.main ]];
+    }
+
+    .ais-page .ais-hit--details > * {
+      width: 100%;
+
+      margin-top: -0.15em;
+      margin-bottom: -0.15em;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      line-height: 1.3;
+    }
+
+    .ais-page .ais-hit--title {
+      color: [[ colors.main ]];
+    }
+
+    .ais-page .ais-hit--subtitle {
+      font-size: 0.9em;
+      color: [[ colors.secondary ]];
+    }
+
+    .ais-page .ais-hit--subtitle * {
+      font-size: inherit;
+    }
+
+    .ais-page .ais-hit--price {
+      color: [[ colors.main ]];
+    }
+
+    .ais-page .ais-hit--price-striked {
+      text-decoration: line-through;
+      color: [[ colors.secondary ]];
+    }
+
+    .ais-page .ais-hit--price-striked span {
+      color: [[ colors.main ]];
+    }
+
+    .ais-page .ais-hit--price-discount {
+      color: [[ colors.secondary ]];
+    }
+
+    .ais-page .ais-hit--cart-button {
+      display: inline-block;
+
+      width: auto;
+      padding: 8px 16px;
+      margin-top: 8px;
+
+      color: [[ colors.secondary ]];
+      background: #e0e0e0;
+
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+
+    .ais-page .ais-hit--cart-button:not(.ais-hit--cart-button__disabled):hover {
+      background-color: [[ colors.main ]];
+      color: white;
+      text-decoration: none;
+    }
+
+    .ais-page .ais-hit--cart-button__disabled {
+      background: #ccc;
+    }
+
+    .ais-page .ais-results-as-list .ais-hit {
+      padding: 30px 25px; /* $v_padding $h_padding */
+      width: 100%;
+      min-height: 170px; /* $img_size + 2 * $v_padding */
+    }
+
+    .ais-page .ais-results-as-list .ais-hit--picture {
+      position: absolute;
+      top: 30px; /* $v_padding */
+      left: 25px; /* $h_padding */
+      width: 110px; /* $img_size */
+      height: 110px; /* $img_size */
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .ais-page .ais-results-as-list .ais-hit--details {
+      margin-left: 160px; /* $img_size + 2 * $h_padding */
+    }
+
+    .ais-page .ais-results-as-block .ais-hit {
+      padding: 30px 25px; /* $v_padding $h_padding */
+
+      text-align: center;
+    }
+
+    .ais-results-size-xs .ais-page .ais-results-as-block .ais-hit {
+      width: 98%;
+      margin-left: 2%;
+    }
+
+    .ais-results-size-sm .ais-page .ais-results-as-block .ais-hit,
+    .ais-results-size-md .ais-page .ais-results-as-block .ais-hit {
+      width: 47.5%;
+      margin-left: 5%;
+    }
+
+    .ais-results-size-sm
+      .ais-page
+      .ais-results-as-block
+      .ais-Hits-item:nth-of-type(2n + 1)
+      .ais-hit,
+    .ais-results-size-md
+      .ais-page
+      .ais-results-as-block
+      .ais-Hits-item:nth-of-type(2n + 1)
+      .ais-hit {
+      margin-left: 0;
+    }
+
+    .ais-results-size-lg .ais-page .ais-results-as-block .ais-hit {
+      width: 30%;
+      margin-left: 5%;
+    }
+
+    .ais-results-size-lg
+      .ais-page
+      .ais-results-as-block
+      .ais-Hits-item:nth-of-type(3n + 1)
+      .ais-hit {
+      margin-left: 0;
+    }
+
+    .ais-page .ais-results-as-block .ais-hit--picture {
+      position: absolute;
+      top: 30px; /* $v_padding */
+      left: 50%;
+      margin-left: -55px; /* -$img_size / 2 */
+
+      width: 110px; /* $img_size */
+      height: 110px; /* $img_size */
+
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .ais-page .ais-results-as-block .ais-hit--details {
+      margin-top: 140px; /* $img_size + $v_padding */
+    }
+
+    /* Pagination */
+    .ais-page .ais-Pagination-list {
+      text-align: center;
+    }
+
+    .ais-page .ais-Pagination-item {
+      display: inline-block;
+
+      width: 32px;
+      height: 32px;
+
+      margin: 0px 5px;
+
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+
+      text-align: center;
+    }
+
+    .ais-page .ais-Pagination--active {
+      border-color: [[ colors.main ]];
+    }
+
+    .ais-page .ais-Pagination-item--disabled {
+      visibility: hidden;
+    }
+
+    .ais-page .ais-Pagination-link {
+      display: inline-block;
+
+      width: 100%;
+      height: 100%;
+
+      padding: 5px 0;
+
+      font-size: 0.9em;
+      color: [[ colors.main ]];
+    }
+    </script>
+    <script type="text/template" id="template_algolia_instant_search_stats">[[# hasNoResults ]]
+        [[# helpers.translation ]]noResultFound[[/ helpers.translation ]]
+    [[/ hasNoResults ]]
+
+    [[# hasOneResult ]]
+      <span class="ais-stats--nb-results">
+        [[# helpers.translation ]]oneResultFound[[/ helpers.translation ]]
+      </span>
+    [[/ hasOneResult ]]
+
+    [[# hasManyResults ]]
+      [[ helpers.outOf ]]
+      <span class="ais-stats--nb-results">
+        [[# helpers.formatNumber ]][[ nbHits ]][[/ helpers.formatNumber ]]
+        [[# helpers.translation ]]resultsFound[[/ helpers.translation ]]
+      </span>
+    [[/ hasManyResults ]]
+
+    [[ helpers.in ]]
+    </script>
+    <script type="text/template" id="template_algolia_instant_search_facet_show_more">[[#isShowingMore]]
+    Show less
+    [[/isShowingMore]]
+    [[^isShowingMore]]
+    Show more
+    [[/isShowingMore]]
+    </script>
+    <script type="text/template" id="template_algolia_instant_search_facet_item"><label class="[[ cssClasses.label ]]">
+      [[# type.disjunctive ]]
+        <input type="checkbox" class="[[ cssClasses.checkbox ]]" [[# isRefined ]]checked[[/ isRefined ]]/>
+      [[/ type.disjunctive ]]
+      [[& label ]]
+      <span class="[[ cssClasses.count ]]">
+        [[# helpers.formatNumber ]]
+          [[ count ]]
+        [[/ helpers.formatNumber ]]
+      </span>
+    </label>
+    </script>
+    <script type="text/template" id="template_algolia_instant_search_current_refined_values_item">[[# label ]]
+      <div class="ais-current-refined-values--label">[[ label ]]</div>[[^ operator ]]:[[/ operator]]
+    [[/ label ]]
+
+    [[# operator ]]
+      [[& displayOperator ]]
+      [[# helpers.formatNumber ]][[ name ]][[/ helpers.formatNumber ]]
+    [[/ operator ]]
+    [[^ operator ]]
+      [[# exclude ]]-[[/ exclude ]][[ name ]]
+    [[/ operator ]]
+    </script>
+    <script type="text/template" id="template_algolia_instant_search_product"><div data-algolia-index="[[ index ]]" data-algolia-position="[[ productPosition ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" class="ais-hit ais-product" data-handle="[[ handle ]]" data-variant-id="[[ objectID ]]" data-distinct="[[ _distinct ]]">
+      <div class="ais-hit--picture" style="background-image: url('[[# helpers.mediumImage ]][[/ helpers.mediumImage ]]')"></div>
+
+      <div class="ais-hit--details">
+        <p class="ais-hit--title">
+          <a data-algolia-index="[[ index ]]" data-algolia-position="[[ productPosition ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" href="[[# helpers.instantsearchLink ]][[/ helpers.instantsearchLink ]]" onclick="void(0)" title="[[# helpers.fullTitle ]][[/ helpers.fullTitle ]]">
+            [[# helpers.fullEscapedHTMLTitle ]][[/ helpers.fullEscapedHTMLTitle ]]
           </a>
         </p>
-      </div>
-    </script>
-    <script type="text/template" id="template_algolia_autocomplete_footer">
-      <div class="aa-footer">
-        [[ translations.allProducts ]]
-        <a class="aa-footer-link" href="/search?q=[[ query ]]">
-          [[ translations.matching ]]
-          <span class="aa-query">
-            "[[ query ]]"
-          </span>
-        </a>
-        (<span class="aa-nbhits">[[# helpers.formatNumber ]][[ nbHits ]][[/ helpers.formatNumber ]]</span>)
-      </div>
-    </script>
-    <script type="text/template" id="template_algolia_instant_search">
-      <div class="ais-page">
-        <div class="ais-facets-button">
-          Show filters
-        </div>
-        <div class="ais-facets">
-            <div class="ais-clear-refinements-container"></div>
-            <div class="ais-current-refined-values-container"></div>
-          [[# facets ]]
-            <div class="ais-facet-[[ type ]] ais-facet-[[ escapedName ]]">
-              <div class="ais-range-slider--header ais-facet--header ais-header">[[ title ]]</div>
-              <div class="ais-facet-[[ escapedName ]]-container"></div>
-            </div>
-          [[/ facets ]]
-        </div>
-        <div class="ais-block">
-          <div class="ais-input">
-            <div class="ais-input--label">
-              [[ translations.search ]]
-            </div>
-            <div class="ais-search-box-container"></div>
-            <div class="ais-input-button">
-              <div class="ais-clear-input-icon"></div>
-              <a title="Search by Algolia - Click to know more" href="https://www.algolia.com/?utm_source=shopify&utm_medium=link&utm_campaign=instantsearch-[[ storeName ]]">
-                <div class="ais-algolia-icon"></div>
-              </a>
-            </div>
-          </div>
-          <div class="ais-search-header">
-            <div class="ais-stats-container"></div>
-            <div class="ais-change-display">
-              <span class="ais-change-display-block ais-change-display-selected"><i class="fa fa-th-large"></i></span>
-              <span class="ais-change-display-list"><i class="fa fa-th-list"></i></span>
-            </div>
-            <div class="ais-sort">
-              [[# multipleSortOrders ]]
-              [[ translations.sortBy ]] <span class="ais-sort-orders-container"></span>
-              [[/ multipleSortOrders ]]
-
-              [[^ multipleSortOrders ]]
-              [[ translations.sortBy ]] [[ translations.relevance ]]
-              [[/ multipleSortOrders ]]
-            </div>
-          </div>
-          <div class="ais-hits-container ais-results-as-block"></div>
-        </div>
-        <div class="ais-pagination-container"></div>
-      </div>
-    </script>
-    <script type="text/template" id="template_algolia_instant_search.css">
-      .main-content {
-        min-height: 460px;
-      }
-
-      .ais-page .aa-highlight {
-        color: black;
-        font-weight: bold;
-      }
-
-      /* Resets */
-      .ais-page div,
-      .ais-page p,
-      .ais-page span,
-      .ais-page a,
-      .ais-page ul,
-      .ais-page li,
-      .ais-page input {
-        box-sizing: border-box;
-
-        margin: 0;
-        padding: 0;
-
-        line-height: 1;
-        font-size: initial;
-      }
-
-      .ais-page input {
-        padding-left: 24px !important;
-      }
-
-      /* Links */
-      .ais-page .ais-link,
-      .ais-page a,
-      .ais-page a:hover,
-      .ais-page a:focus,
-      .ais-page a:active {
-        font-weight: initial;
-        font-style: initial;
-        text-decoration: initial;
-
-        color: [[ colors.main ]];
-
-        cursor: pointer;
-      }
-
-      .ais-page a:hover,
-      .ais-page a:focus,
-      .ais-page a:active,
-      .ais-page .ais-link:hover {
-        text-decoration: underline;
-      }
-
-      /* Columns */
-      .ais-page .ais-facets {
-        width: 25%;
-        float: left;
-        padding-right: 8px;
-        position: relative;
-        margin-top: 71px;
-      }
-
-      .ais-page .ais-block {
-        width: 75%;
-        float: right;
-        padding-left: 8px;
-      }
-
-      .ais-results-size-xs .ais-page .ais-facets,
-      .ais-results-size-xs .ais-page .ais-block,
-      .ais-results-size-sm .ais-page .ais-facets,
-      .ais-results-size-sm .ais-page .ais-block {
-        width: 100%;
-        padding-left: 0px;
-      }
-
-      .ais-page .ais-Pagination-list {
-        clear: both;
-      }
-
-      /* Refine button */
-      .ais-page .ais-facets-button {
-        display: none;
-
-        margin: 16px 0;
-        padding: 8px;
-
-        border: 1px solid #e0e0e0;
-        text-align: center;
-
-        cursor: pointer;
-      }
-
-      .ais-results-size-xs .ais-page .ais-facets-button,
-      .ais-results-size-sm .ais-page .ais-facets-button {
-        display: block;
-      }
-
-      .ais-results-size-xs .ais-page .ais-facets,
-      .ais-results-size-sm .ais-page .ais-facets {
-        display: none;
-      }
-
-      .ais-results-size-xs .ais-page .ais-facets__shown,
-      .ais-results-size-sm .ais-page .ais-facets__shown {
-        display: block;
-      }
-
-      /* Facets */
-      .ais-page .ais-facet {
-        border: solid #e0e0e0;
-        /* border-width: 0 1px 1px; */
-        border-width: 0;
-
-        margin-bottom: 16px;
-        padding: 8px;
-
-        color: #636363;
-      }
-
-      .ais-page .ais-facet a,
-      .ais-page .ais-facet a:hover,
-      .ais-page .ais-facet a:focus,
-      .ais-page .ais-facet a:active {
-        color: #666;
-      }
-
-      .ais-page .ais-facet--header {
-        /* border: solid #e0e0e0; */
-        border: solid [[ colors.main ]];
-        /* border-width: 1px 1px 0; */
-        border-width: 0 0 1px 0;
-
-        padding: 6px 8px;
-
-        /* background: #f4f4f4; */
-
-        font-size: 0.95em;
-        color: #757575;
-        /* text-transform: uppercase; */
-        text-transform: capitalize;
-        font-weight: bold;
-        font-family: Lora,serif;
-      }
-
-      .ais-page .ais-facet--body {
-        padding: 8px;
-      }
-
-      .ais-page .ais-facet--item {
-        position: relative;
-        width: 100%;
-
-        padding: 6px 50px 6px 0;
-
-        cursor: pointer;
-      }
-
-      .ais-page .ais-facet--label {
-        display: inline-block;
-        margin-top: -0.15em;
-        margin-bottom: -0.15em;
-        font-weight: 400;
-
-        width: 100%;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        text-transform: capitalize;
-
-        cursor: pointer;
-
-        line-height: 1.3;
-      }
-
-      .ais-page .ais-facet--count {
-        [[#distinct]]
-          display: none;
-        [[/distinct]]
-
-        position: absolute;
-
-        top: 6px;
-        right: 0px;
-
-        color: [[ colors.secondary ]];
-      }
-
-      .ais-page .ais-RefinementList-item--selected {
-        font-weight: bold;
-      }
-
-      .ais-page .ais-RefinementList-item--selected,
-      .ais-page .ais-facet--item:hover {
-        margin-left: -8px;
-        padding-left: 4px;
-        padding-right: 42px;
-
-        border-left: 4px solid [[ colors.main ]];
-      }
-
-      .ais-page .ais-RefinementList-item--selected .ais-facet--count,
-      .ais-page .ais-facet--item:hover .ais-facet--count {
-        right: -8px;
-      }
-
-      .ais-page .ais-CurrentRefinements {
-        position: relative;
-      }
-
-      .ais-page .ais-CurrentRefinements--header {
-        padding-right: 72px;
-      }
-
-      .ais-page .ais-clear-refinements-container {
-        position: absolute;
-        right: 11px;
-        top: 1px;
-      }
-
-      .ais-page .ais-ClearRefinements-button {
-        border: 0;
-        background: 0;
-        color: #666;
-      }
-
-      .ais-page .ais-ClearRefinements-button:hover {
-        text-decoration: underline;
-      }
-
-      .ais-page .ais-CurrentRefinements-label {
-        display: table;
-
-        width: 100%;
-        margin: 4px 0;
-
-        border: 1px solid #e0e0e0;
-
-        cursor: pointer;
-      }
-
-      .ais-page .ais-CurrentRefinements-label:before {
-        content: '\2a2f';
-        display: table-cell;
-        vertical-align: middle;
-
-        width: 0;
-        padding: 4px 6px;
-
-        background: #e0e0e0;
-      }
-
-      .ais-page .ais-CurrentRefinements-label div {
-        display: inline;
-      }
-
-      .ais-page .ais-CurrentRefinements-label > div {
-        display: table-cell;
-        vertical-align: middle;
-
-        margin-top: -0.15em;
-        margin-bottom: -0.15em;
-        padding: 4px 6px;
-
-        background: #f4f4f4;
-
-        width: 100%;
-        max-width: 1px;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        line-height: 1.3;
-      }
-
-      .ais-page .ais-CurrentRefinements-label:hover {
-        text-decoration: none;
-      }
-
-      .ais-page .ais-CurrentRefinements-label:hover > div {
-        text-decoration: line-through;
-      }
-
-      .ais-page .ais-CurrentRefinements-label {
-        font-weight: bold;
-      }
-
-      .ais-RangeSlider .rheostat-tooltip {
-        display: none;
-        background: transparent;
-        position: absolute;
-        font-size: 0.8em;
-        transform: translate(-50%, -100%);
-        left: 50%;
-        line-height: 1.5em;
-        text-align: center;
-      }
-
-      .ais-page .ais-current-refined-values--link {
-        display: table;
-        width: 100%;
-        margin: 4px 0;
-        border: 1px solid #e0e0e0;
-        cursor: pointer;
-      }
-
-      .ais-page .ais-current-refined-values--link:hover {
-        text-decoration: none;
-      }
-
-      .ais-page .ais-current-refined-values--link:before {
-        content: '\2a2f';
-        display: table-cell;
-        vertical-align: middle;
-        width: 0;
-        padding: 4px 6px;
-        background: #e0e0e0;
-      }
-
-      .ais-page .ais-current-refined-values--link div {
-        display: inline;
-      }
-
-      .ais-page .ais-current-refined-values--link > div {
-        display: table-cell;
-        vertical-align: middle;
-        margin-top: -0.15em;
-        margin-bottom: -0.15em;
-        padding: 4px 6px;
-        background: #f4f4f4;
-        width: 100%;
-        max-width: 1px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        line-height: 1.3;
-      }
-
-      .ais-page .ais-current-refined-values--link:hover > div {
-        text-decoration: line-through;
-      }
-
-      .ais-page .ais-current-refined-values--label {
-        font-weight: bold;
-      }
-
-      .ais-RangeSlider .rheostat-handle:hover .rheostat-tooltip {
-        display: block;
-      }
-
-      .ais-RangeSlider .rheostat-handle {
-        background: #fff;
-        border-radius: 50%;
-        cursor: grab;
-        height: 20px;
-        outline: none;
-        transform: translate(-50%, calc(-50% + -3px));
-        border: 1px solid #ccc;
-        width: 20px;
-        z-index: 1;
-      }
-
-      .ais-RangeSlider .rheostat-value {
-        padding-top: 15px;
-        font-size: 0.8em;
-        transform: translateX(-50%);
-        position: absolute;
-      }
-
-      .ais-RangeSlider .rheostat-horizontal {
-        cursor: pointer;
-        margin: 16px 16px 24px;
-      }
-
-      .ais-RangeSlider .rheostat-background {
-        background-color: rgba(65, 66, 71, 0.08);
-        border: 1px solid #ddd;
-        height: 6px;
-      }
-
-      .ais-RangeSlider .rheostat-progress {
-        background-color: [[ colors.main ]];
-        cursor: pointer;
-        height: 4px;
-        top: 1px;
-        position: absolute;
-      }
-
-      .ais-RangeSlider .rheostat-marker-horizontal {
-        background: #ddd;
-        width: 1px;
-        height: 5px;
-        pointer-events: none;
-      }
-
-      .ais-RangeSlider .rheostat-marker-large {
-        background: #ddd;
-        width: 2px;
-        height: 12px;
-      }
-
-      /* Search box */
-
-      .ais-page .ais-input {
-        display: table;
-        width: 100%;
-
-        border: 2px solid [[ colors.main ]];
-
-        border-radius: 25px;
-        overflow: hidden;
-        padding-right: 10px;
-        background: #fff;
-      }
-
-      .ais-page .ais-input--label {
-        display: table-cell;
-        vertical-align: middle;
-
-        width: 0;
-
-        padding: 8px;
-        padding-right: 24px;
-
-        white-space: nowrap;
-        color: white;
-        background: [[ colors.main ]];
-
-        display: none;
-      }
-
-      .ais-results-size-xs .ais-page .ais-input--label {
-        display: none;
-      }
-
-      .ais-page .ais-search-box-container {
-        display: table-cell;
-        width: 100%;
-        vertical-align: middle;
-      }
-
-      .ais-page .ais-SearchBox-input {
-        width: 100%;
-        padding: 8px 16px 8px 4px;
-
-        border: none;
-      }
-
-      .ais-page .ais-SearchBox-input::-ms-clear {
-        display: none;
-        width: 0;
-        height: 0;
-      }
-
-      .ais-page .ais-SearchBox-input,
-      .ais-page .ais-SearchBox-input:focus {
-        outline: 0;
-        box-shadow: none;
-
-        height: 44px;
-        padding: 0 8px;
-        background-color: #fff;
-      }
-
-      .ais-page .ais-input-button {
-        display: table-cell;
-        vertical-align: middle;
-        background-color: #fff;
-        width: 0;
-        padding: 4px 8px;
-      }
-
-      .ais-page .ais-clear-input-icon,
-      .ais-page .ais-algolia-icon {
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-
-        cursor: pointer;
-      }
-
-      .ais-page .ais-clear-input-icon {
-        width: 16px;
-        height: 16px;
-
-        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBvcGFjaXR5PSIwLjYiPjxwYXRoIGQ9Ik0uNTY2IDEuNjk4TDAgMS4xMyAxLjEzMiAwbC41NjUuNTY2TDYgNC44NjggMTAuMzAyLjU2NiAxMC44NjggMCAxMiAxLjEzMmwtLjU2Ni41NjVMNy4xMzIgNmw0LjMwMiA0LjMuNTY2LjU2OEwxMC44NjggMTJsLS41NjUtLjU2Nkw2IDcuMTMybC00LjMgNC4zMDJMMS4xMyAxMiAwIDEwLjg2OGwuNTY2LS41NjVMNC44NjggNiAuNTY2IDEuNjk4eiIvPjwvc3ZnPg==');
-      }
-
-      .ais-page .ais-algolia-icon {
-        width: 24px;
-        height: 24px;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbC1ydWxlPSJub256ZXJvIj48cGF0aCBmaWxsPSIjNTQ2OEZGIiBkPSJNNi41MDIgMGgzNi4zNzljMy41OCAwIDYuNTAyIDIuOTIgNi41MDIgNi41Mjl2MzYuNTNjMCAzLjU5Ni0yLjkwOCA2LjUyOC02LjUwMiA2LjUyOEg2LjUwMkMyLjkyMiA0OS41ODcgMCA0Ni42NjkgMCA0My4wNlY2LjUxMkMwIDIuOTIgMi45MDUgMCA2LjUwMiAwIi8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTI5LjgzNyAxMS4wN3YtMS43YzAtMS4xODktLjk2LTIuMTUyLTIuMTQ0LTIuMTUxaC00Ljk5OGEyLjE0OCAyLjE0OCAwIDAwLTIuMTQ0IDIuMTV2MS43NDZjMCAuMTk1LjE4LjMzLjM3NS4yODVhMTUuNTY0IDE1LjU2NCAwIDAxNC4zNS0uNjE1YzEuNDI2IDAgMi44MzcuMTk0IDQuMjAxLjU3YS4yOS4yOSAwIDAwLjM2LS4yODVNMTYuMTQgMTMuMjk1bC0uODU0LS44NTdhMi4xMzggMi4xMzggMCAwMC0zLjAzIDBsLTEuMDIxIDEuMDIyYTIuMTQ3IDIuMTQ3IDAgMDAwIDMuMDRsLjg0Ljg0M2MuMTM1LjEzNC4zMy4xMDMuNDUtLjAzMWExNi40NiAxNi40NiAwIDAxMS42MzUtMS45MjYgMTUuNTIzIDE1LjUyMyAwIDAxMS45MzUtMS42NTNjLjE1LS4wOS4xNjQtLjMwMi4wNDUtLjQzOG05LjEyIDUuMzk5djcuMzU1YzAgLjIxLjIyNy4zNjIuNDIuMjU2bDYuNTEzLTMuMzg0Yy4xNDgtLjA3NC4xOTMtLjI1Ni4xMi0uNDA1YTguMDk3IDguMDk3IDAgMDAtNi43NTItNC4xMDdjLS4xNSAwLS4zLjEyLS4zLjI4NW0wIDE3LjcxOWMtNS40MyAwLTkuODQyLTQuNDI0LTkuODQyLTkuODY4czQuNDEyLTkuODY2IDkuODQyLTkuODY2YzUuNDMyIDAgOS44NDIgNC40MjIgOS44NDIgOS44NjZzLTQuMzk1IDkuODY4LTkuODQyIDkuODY4bTAtMjMuODg0Yy03LjcxMiAwLTEzLjk2NyA2LjI3Mi0xMy45NjcgMTQuMDE2IDAgNy43NDYgNi4yNTUgMTQuMDA0IDEzLjk2NyAxNC4wMDQgNy43MTIgMCAxMy45NjctNi4yNzMgMTMuOTY3LTE0LjAxOCAwLTcuNzQ2LTYuMjQtMTQuMDAyLTEzLjk2Ny0xNC4wMDIiLz48L2c+PC9nPjwvc3ZnPg==")
-      }
-
-      /* Search header */
-      .ais-page .ais-search-header {
-        margin: 16px 0 8px 0;
-        padding: 0.6em 0.9em 0.4em 0.9em;
-
-        background: #f4f4f4;
-        color: [[ colors.secondary ]];
-      }
-
-      .ais-page .ais-search-header:after {
-        content: '';
-        clear: both;
-        display: block;
-      }
-
-      .ais-page .ais-search-header {
-        font-size: 0.85em;
-      }
-
-      .ais-page .ais-search-header * {
-        font-size: inherit;
-        line-height: 1.6;
-      }
-
-      /* Stats */
-      .ais-page .ais-Stats {
-        float: left;
-      }
-
-      .ais-page .ais-stats--nb-results {
-        font-weight: bold;
-      }
-
-      .ais-results-size-xs .ais-page .ais-Stats {
-        float: none;
-      }
-
-      /* Display mode */
-      .ais-page .ais-change-display {
-        float: right;
-
-        margin-left: 10px;
-
-        cursor: pointer;
-      }
-
-      .ais-page .ais-change-display-block:hover,
-      .ais-page .ais-change-display-list:hover,
-      .ais-page .ais-change-display-selected {
-        color: [[ colors.main ]];
-      }
-
-      /* Sort orders */
-      .ais-page .ais-sort {
-        float: right;
-      }
-
-      .ais-results-size-xs .ais-page .ais-sort {
-        float: none;
-      }
-
-      .ais-page .ais-SortBy {
-        display: inline-block;
-      }
-
-      .ais-page .ais-SortBy-select {
-        height: 1.6em;
-        padding: 0px 30px 0px 5px;
-        margin-top: -0.1em;
-      }
-
-      /* Hits */
-      .ais-page .ais-Hits:after {
-        content: '';
-        clear: both;
-        display: block;
-      }
-
-      .ais-hits-container {
-        text-align: center;
-      }
-
-      .ais-Hits-list {
-        list-style: none;
-          margin: 0;
-          padding: 0;
-      }
-      .ais-hit--title a {
-        font-weight: 700;
-          color: #1a1a1a !important;
-        text-decoration: none;
-      }
-
-      .ais-hit--title a:hover {
-        font-weight: 700;
-          color: #1a1a1a !important;
-        text-decoration: none;
-      }
-
-
-
-
-      .ais-hit--subtitle {
-        display: none;
-      }
-
-      .ais-page {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .ais-RefinementList-list {
-        list-style: none;
-      }
-
-
-      .ais-page .ais-hit-empty {
-        margin-top: 60px;
-        text-align: center;
-      }
-
-      .ais-page .ais-highlight {
-        position: relative;
-        z-index: 1;
-
-        font-weight: bold;
-      }
-
-      .ais-page .ais-highlight:before {
-        content: '';
-        position: absolute;
-
-        z-index: -1;
-
-        width: 100%;
-        height: 100%;
-
-        background: [[ colors.main ]];
-        opacity: 0.1;
-      }
-
-      .ais-page .ais-hit {
-        position: relative;
-        float: left;
-        margin: 8px 0 16px 0;
-        cursor: pointer;
-
-        border-left-width: 1px;
-        padding: 25px;
-        position: relative;
-        display: block;
-        background-color: #fff;
-        text-align: center;
-        border-color: #f7f7f7;
-        border-style: solid;
-        border-width: 1px;
-        color: #666;
-        text-decoration: none;
-        transition: border 0.3s ease-out;
-        z-index: 1;
-        margin: 0 !important;
-      }
-
-      .ais-page .ais-hit:hover {
-        /* border-color: [[ colors.main ]]; */
-        border-color: #cbcbcb;
-      }
-
-      .ais-page .ais-hit--details > * {
-        width: 100%;
-
-        margin-top: -0.15em;
-        margin-bottom: -0.15em;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        line-height: 1.3;
-      }
-
-      .ais-page .ais-hit--title {
-        color: [[ colors.main ]];
-      }
-
-      .ais-page .ais-hit--subtitle {
-        font-size: 0.9em;
-        color: [[ colors.secondary ]];
-      }
-
-      .ais-page .ais-hit--subtitle * {
-        font-size: inherit;
-      }
-
-      .ais-page .ais-hit--price {
-        font-size: 1em;
-        color: #737373;
-      }
-
-      .ais-page .ais-hit--price-striked {
-        text-decoration: line-through;
-        font-size: 1em;
-        font-weight: 1em;
-        color: #737373;
-      }
-
-      .ais-page .ais-hit--price-striked span {
-        color: #737373;
-      }
-
-      .ais-page .ais-hit--price-discount {
-        font-size: 1em;
-        font-weight: 1em;
-        color: #737373;
-      }
-
-      .ais-page .ais-hit--cart-button {
-        display: inline-block;
-
-        width: auto;
-        padding: 8px 16px;
-        margin-top: 8px;
-
-        color: white;
-        background: #C04F1D;
-
-        font-size: 0.9em;
-        text-transform: uppercase;
-      }
-      .ais-page .ais-hit--cart-button:hover {
-        background: #943D16 !important;
-      }
-
-      .ais-page .ais-hit--cart-button:not(.ais-hit--cart-button__disabled):hover {
-        background-color: [[ colors.main ]];
-        color: white;
-        text-decoration: none;
-      }
-
-      .ais-page .ais-hit--cart-button__disabled {
-        background: #ccc;
-      }
-
-      .ais-page .ais-hit--cart-button__disabled:hover {
-        background: #ccc !important;
-      }
-
-      .ais-page .ais-results-as-list .ais-hit {
-        padding: 30px 25px; /* $v_padding $h_padding */
-        width: 100%;
-        min-height: 170px; /* $img_size + 2 * $v_padding */
-      }
-
-      .ais-page .ais-results-as-list .ais-hit--picture {
-        position: absolute;
-        top: 30px; /* $v_padding */
-        left: 25px; /* $h_padding */
-        width: 110px; /* $img_size */
-        height: 110px; /* $img_size */
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .ais-page .ais-results-as-list .ais-hit--details {
-        margin-left: 160px; /* $img_size + 2 * $h_padding */
-      }
-
-      .ais-page .ais-results-as-block .ais-hit {
-        padding: 30px 25px; /* $v_padding $h_padding */
-
-        text-align: center;
-      }
-
-      .ais-results-size-xs .ais-page .ais-results-as-block .ais-hit {
-        width: 98%;
-        margin-left: 2%;
-      }
-
-      .ais-results-size-sm .ais-page .ais-results-as-block .ais-hit,
-      .ais-results-size-md .ais-page .ais-results-as-block .ais-hit {
-        width: 47.5%;
-        margin-left: 5%;
-      }
-
-      .ais-results-size-sm
-        .ais-page
-        .ais-results-as-block
-        .ais-Hits-item:nth-of-type(2n + 1)
-        .ais-hit,
-      .ais-results-size-md
-        .ais-page
-        .ais-results-as-block
-        .ais-Hits-item:nth-of-type(2n + 1)
-        .ais-hit {
-        margin-left: 0;
-      }
-
-      .ais-results-size-lg .ais-page .ais-results-as-block .ais-hit {
-        width: 33.33%;
-        margin-left: 5%;
-      }
-
-      .ais-results-size-lg
-        .ais-page
-        .ais-results-as-block
-        .ais-Hits-item:nth-of-type(3n + 1)
-        .ais-hit {
-        margin-left: 0;
-      }
-
-      .ais-page .ais-results-as-block .ais-hit--picture {
-        position: absolute;
-        top: 30px; /* $v_padding */
-        left: 50%;
-        margin-left: -55px; /* -$img_size / 2 */
-
-        width: 110px; /* $img_size */
-        height: 110px; /* $img_size */
-
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      .ais-page .ais-results-as-block .ais-hit--details {
-        margin-top: 140px; /* $img_size + $v_padding */
-      }
-
-      /* Pagination */
-      .ais-page .ais-Pagination-list {
-        text-align: center;
-        padding-top: 35px;
-      }
-
-      .ais-page .ais-Pagination-item {
-        display: inline-block;
-
-        width: 32px;
-        height: 32px;
-
-        margin: 0px 5px;
-
-        /* border: 1px solid #e0e0e0; */
-        /* border-radius: 2px; */
-
-        text-align: center;
-      }
-
-      .ais-page .ais-Pagination-item.ais-Pagination-item--selected .ais-Pagination-link {
-        font-weight: bold;
-      }
-
-      .ais-page .ais-Pagination--active {
-        border-color: [[ colors.main ]];
-      }
-
-      .ais-page .ais-Pagination-item--disabled {
-        visibility: hidden;
-      }
-
-      .ais-page .ais-Pagination-link {
-        display: inline-block;
-
-        width: 100%;
-        height: 100%;
-
-        padding: 5px 0;
-
-        font-size: 0.9em;
-        color: [[ colors.main ]];
-      }
-    </script>
-    <script type="text/template" id="template_algolia_instant_search_stats">
-      [[# hasNoResults ]]
-          [[# helpers.translation ]]noResultFound[[/ helpers.translation ]]
-      [[/ hasNoResults ]]
-
-      [[# hasOneResult ]]
-        <span class="ais-stats--nb-results">
-          [[# helpers.translation ]]oneResultFound[[/ helpers.translation ]]
-        </span>
-      [[/ hasOneResult ]]
-
-      [[# hasManyResults ]]
-        [[ helpers.outOf ]]
-        <span class="ais-stats--nb-results">
-          [[# helpers.formatNumber ]][[ nbHits ]][[/ helpers.formatNumber ]]
-          [[# helpers.translation ]]resultsFound[[/ helpers.translation ]]
-        </span>
-      [[/ hasManyResults ]]
-
-      [[ helpers.in ]]
-    </script>
-    <script
-      type="text/template"
-      id="template_algolia_instant_search_facet_item"
-    >
-      <label class="[[ cssClasses.label ]]">
-        [[# type.disjunctive ]]
-          <input type="checkbox" class="[[ cssClasses.checkbox ]]" [[# isRefined ]]checked[[/ isRefined ]]/>
-        [[/ type.disjunctive ]]
-        [[& label ]]
-        <span class="[[ cssClasses.count ]]">
-          [[# helpers.formatNumber ]]
-            [[ count ]]
-          [[/ helpers.formatNumber ]]
-        </span>
-      </label>
-    </script>
-    <script
-      type="text/template"
-      id="template_algolia_instant_search_current_refined_values_item"
-    >
-      [[# label ]]
-        <div class="ais-current-refined-values--label">[[ label ]]</div>[[^ operator ]]:[[/ operator]]
-      [[/ label ]]
-
-      [[# operator ]]
-        [[& displayOperator ]]
-        [[# helpers.formatNumber ]][[ name ]][[/ helpers.formatNumber ]]
-      [[/ operator ]]
-      [[^ operator ]]
-        [[# exclude ]]-[[/ exclude ]][[ name ]]
-      [[/ operator ]]
-    </script>
-    <script type="text/template" id="template_algolia_instant_search_product">
-      <div data-algolia-index="[[ index ]]" data-algolia-position="[[ productPosition ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" class="ais-hit ais-product" data-handle="[[ handle ]]" data-variant-id="[[ objectID ]]" data-distinct="[[ _distinct ]]">
-        <div class="ais-hit--picture" style="background-image: url('[[# helpers.mediumImage ]][[/ helpers.mediumImage ]]')"></div>
-
-        <div class="ais-hit--details">
-          <p class="ais-hit--title">
-            <a data-algolia-index="[[ index ]]" data-algolia-position="[[ productPosition ]]" data-algolia-queryid="[[ queryID ]]" data-algolia-objectid="[[ objectID ]]" href="[[# helpers.instantsearchLink ]][[/ helpers.instantsearchLink ]]" onclick="void(0)" title="[[# helpers.fullTitle ]][[/ helpers.fullTitle ]]">
-              [[# helpers.fullEscapedHTMLTitle ]][[/ helpers.fullEscapedHTMLTitle ]]
-            </a>
-          </p>
-          <p class="ais-hit--subtitle" title="[[ product_type ]][[# vendor ]] by [[ vendor ]][[/ vendor ]]">
-            [[& _highlightResult.product_type.value ]]
-            [[# vendor ]] by [[& _highlightResult.vendor.value ]][[/ vendor ]]
-          </p>
-          <p class="ais-hit--price">[[# helpers.instantsearchPrice ]][[/ helpers.instantsearchPrice ]]</p>
-          <!-- Extra info examples - Remove the display: none to show them -->
-          <p class="ais-hit--info" style="display: none">
-            [[# sku ]]
-              <span class="algolia-sku">[[& _highlightResult.sku.value ]]</span>
-            [[/ sku ]]
-            [[# barcode ]]
-              <span class="algolia-barcode">[[& _highlightResult.barcode.value ]]</span>
-            [[/ barcode ]]
-            [[# weight ]]
-              <span class="algolia-weight">[[ weight ]]</span>
-            [[/ weight ]]
-            [[^ taxable ]]
-              <span class="algolia-taxable">Tax free</span>
-            [[/ taxable ]]
-          </p>
-          <!-- Tags example - Remove the display: none to show them -->
-          <p class="ais-hit--tags" style="display: none">
-            [[# _highlightResult.tags ]]
-              <span class="ais-hit--tag">[[& value ]]</span>
-            [[/ _highlightResult.tags ]]
-          </p>
+        <p class="ais-hit--subtitle" title="[[ product_type ]][[# vendor ]] by [[ vendor ]][[/ vendor ]]">
+          [[# helpers.fullEscapedHTMLProductType ]][[/ helpers.fullEscapedHTMLProductType ]]
+          [[# vendor ]] by [[# helpers.fullEscapedHTMLVendor ]][[/ helpers.fullEscapedHTMLVendor ]][[/ vendor ]]
+        </p>
+        <p class="ais-hit--price">[[# helpers.instantsearchPrice ]][[/ helpers.instantsearchPrice ]]</p>
+        <!-- Extra info examples - Remove the display: none to show them -->
+        <p class="ais-hit--info" style="display: none">
+          [[# sku ]]
+            <span class="algolia-sku">[[& _highlightResult.sku.value ]]</span>
+          [[/ sku ]]
+          [[# barcode ]]
+            <span class="algolia-barcode">[[& _highlightResult.barcode.value ]]</span>
+          [[/ barcode ]]
+          [[# weight ]]
+            <span class="algolia-weight">[[ weight ]]</span>
+          [[/ weight ]]
+          [[^ taxable ]]
+            <span class="algolia-taxable">Tax free</span>
+          [[/ taxable ]]
+        </p>
+        <!-- Tags example - Remove the display: none to show them -->
+        <p class="ais-hit--tags" style="display: none">
+          [[# _highlightResult.tags ]]
+            <span class="ais-hit--tag">[[& value ]]</span>
+          [[/ _highlightResult.tags ]]
+        </p>
+        [[^ _distinct ]]
           <form id="algolia-add-to-cart-[[ objectID ]]" style="display: none;" action="/cart/add" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="[[ objectID ]]" />
           </form>
           <p class="ais-hit--cart">
             [[# can_order ]]
-            <span class="ais-hit--cart-button" data-form-id="algolia-add-to-cart-[[ objectID ]]">
-              [[ translations.addToCart ]]
-            </span>
+              <span class="ais-hit--cart-button" data-form-id="algolia-add-to-cart-[[ objectID ]]">
+                [[ translations.addToCart ]]
+              </span>
             [[/ can_order ]]
             [[^ can_order ]]
-            <span class="ais-hit--cart-button ais-hit--cart-button__disabled">
-              [[ translations.outOfStock ]]
-            </span>
+              <span class="ais-hit--cart-button ais-hit--cart-button__disabled">
+                [[ translations.outOfStock ]]
+              </span>
             [[/ can_order ]]
           </p>
-        </div>
+        [[/ _distinct ]]
       </div>
+    </div>
     </script>
-    <script type="text/template" id="template_algolia_instant_search_no_result">
-      <div class="ais-hit-empty">
-        <div class="ais-hit-empty--title">[[ translations.noResultFound ]]</div>
-        <div class="ais-hit-empty--clears">
-          [[# helpers.try_clear_or_change_input ]]
-            <a class="ais-hit-empty--clear-filters ais-link"> </a>
-            <a class="ais-hit-empty--clear-input ais-link"> </a>
-          [[/ helpers.try_clear_or_change_input ]]
-        </div>
+    <script type="text/template" id="template_algolia_instant_search_no_result"><div class="ais-hit-empty">
+      <div class="ais-hit-empty--title">[[ translations.noResultFound ]]</div>
+      <div class="ais-hit-empty--clears">
+        [[# helpers.try_clear_or_change_input ]]
+          <a class="ais-hit-empty--clear-filters ais-link"> </a>
+          <a class="ais-hit-empty--clear-input ais-link"> </a>
+        [[/ helpers.try_clear_or_change_input ]]
       </div>
+    </div>
     </script>
 
     <script
